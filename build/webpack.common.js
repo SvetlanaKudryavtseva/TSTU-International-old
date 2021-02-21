@@ -27,7 +27,8 @@ module.exports = {
         entry: {
             //app: './src/app.js'
             app: PATHS.src,
-            lk: `${PATHS.src}/lk.js`
+            lk: `${PATHS.src}/lk.js`,
+            test: `${PATHS.src}/test.js`
         },
         output: {
             filename: `${PATHS.assets}js/[name].[hash].js`,
