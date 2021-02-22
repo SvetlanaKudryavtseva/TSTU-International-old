@@ -1,0 +1,20 @@
+extends ../layout/layout-inner
+block variables
+    - var description = 'Rector of TSTU - Mikhail N. Krasnyansky - Tambov State Technical University'
+    - var title = 'Rector of Tambov State Technical University'
+    - var pageClass = 'rector-page'
+
+block content
+    .breadcrumbs 
+        a(href="index.html" class="breadcrumbs__link") Home
+        a(href="about.html" class="breadcrumbs__link breadcrumbs__section-link") About TSTU
+        a(href="#" class="breadcrumbs__link breadcrumbs__link--active") Rector
+    section.about
+        h3.section__title Rector
+        .colums
+            .colums__col30
+                include ../../blocks/aside/aside
+            .colums__col70
+                .content
+                    img.content__img(src="../../assets/images/Rector of Tambov State Technical University.jpg")
+                    p.section__text Mikhail N. Krasnyansky, Rector, Professor, Doctor of Technical Sciences, Corresponding Member of the Russian Academy of Natural Sciences.

@@ -1,0 +1,17 @@
+nav.breadcrumbs
+    ul.breadcrumbs-list.js-breadcrumbs-button
+        -
+            let breadcrumbs = [
+                {url: '#about', text: 'About TSTU'},
+                {url: '#mission', text: 'Mission & Vission'},
+                {url: '#history', text: 'History'},
+                {url: '#rector', text: 'Rector'},
+            ]
+        let isPage = 0;
+        each element, i in breadcrumbs
+            if isPage === i
+                li.breadcrumbs__item.is-active
+                    a(href=element.url, class=breadcrumbs__link) #{element.text}
+            else
+                li.breadcrumbs__item
+                    a(href=element.url, class=breadcrumbs__link) #{element.text}

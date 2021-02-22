@@ -1,0 +1,6 @@
+mixin banner(data)
+    .banner
+        .banner__item.gradient-overlay
+            //- img.banner__img(class='banner__img' src='../assets/images/about-TSTU.jpg'
+            h4= data.title
+            img.banner__img(id=data.id,class="banner__img--"+data.id,src=data.src, alt=data.alt)

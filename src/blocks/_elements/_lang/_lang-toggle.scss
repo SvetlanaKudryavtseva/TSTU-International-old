@@ -1,0 +1,29 @@
+    .lang-toggle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right: 5px;
+        @media screen and (min-width: $desktop-sm) {
+            display: none;
+        }
+        &__link {
+            text-decoration: none;
+            color: $color-primary;
+            padding-left: 10px;
+            padding-right: 5px;
+            @media screen and (min-width: $tablet-sm) {
+                padding-left: 20px;
+                padding-right: 10px;
+            }
+        }
+        &--inner {
+            display: none;
+            flex-direction: column;
+        }
+    }
+    
+    .lang-toggle:before {
+        content: "";
+        border-left: 2px solid $color-primary;
+        height: 45px;
+    }

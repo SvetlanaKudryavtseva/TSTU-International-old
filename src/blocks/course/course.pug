@@ -1,0 +1,32 @@
+<!-- section -->
+section.course
+    .container
+        include ../_elements/_section/_section
+        -
+            const courseTitle = {
+            title: 'Intensive Russian Language Course',
+            }
+        +section(courseTitle)
+            .colums
+                .colums__col50
+                    - const courseImg = {
+                    -   src: '../assets/images/TSTU_foreign_students-min.jpg',
+                    -   alt: 'foreign students at Tambov State Technical University',
+                    - }
+                    +section(courseImg)
+                .colums__col50
+                    - const courseText = {
+                    -   textBold: 'Intensive classes of Russian language are designed by the experts of linguistics of Tambov State Technical University.',
+                    -   textRegular: 'During the academic year, you will gain good knowledge of Russian culture, improve your language skills and prepare for full degree programs.',
+                    - }
+                    +section(courseText)
+                    include ../_elements/_button/_button
+                    - const button = {
+                    -   color: true,
+                    -   link: '',
+                    -   text: 'Apply now'
+                    -   }
+                    +button(button)
+<!-- end section -->
+
+

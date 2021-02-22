@@ -1,0 +1,16 @@
+.nav {
+    &__link {
+        font-weight: $font-weight-main;
+        padding-right: 38px;
+        color: $color-secondary;
+        @media screen and (min-width: $desktop-sm) {
+            padding-right: 24px;
+        }
+        @media screen and (min-width: $desktop) {
+            padding-right: 32px;
+        }
+        @media screen and (min-width: $desktop-lg) {
+            padding-right: 38px;
+        }
+    }
+}

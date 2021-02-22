@@ -1,0 +1,132 @@
+header.page-header
+    .page-header__top
+        .page-header__content.container
+            include ../_elements/_nav/_nav
+            -
+                var navigation = [
+                    {
+                        id: 'pets',
+                        link: '#pets',
+                        title: 'Pets',
+                        type: [
+                            {
+                                id: 'cat',
+                                title: 'cat'
+                            },
+                            {
+                                id: 'dog',
+                                title: 'dog'
+                            },
+                            {
+                                id: 'ferret',
+                                title: 'ferret'
+                            }
+                        ]
+                    },
+                    {
+                        id: 'farm_animals',
+                        link: '#farm_animals',
+                        title: 'Farm Animals',
+                        type: [
+                            {
+                                id: 'cow',
+                                title: 'cow'
+                            },
+                            {
+                                id: 'horse',
+                                title: 'horse'
+                            }
+                        ]
+                    },
+                    {
+                        id: 'exotic_animals',
+                        link: '#exotic_animals',
+                        title: 'Exotic animals',
+                        type: [
+                            {
+                                id: 'camel',
+                                title: 'camel'
+                            },
+                            {
+                                id: 'kangaroo',
+                                title: 'kangaroo'
+                            },
+                            {
+                                id: 'peacock',
+                                title: 'peacock'
+                            }
+                        ]
+                    },
+      
+                ]
+            +nav()
+            include ../_elements/_social/_social
+            +social
+            include ../_elements/_lang/_lang
+            +lang
+    .page-header__middle
+        .page-header__content.container
+            include ../_elements/_brand/_brand
+            +brand
+            include ../_elements/_lang/_lang-toggle.pug
+            +lang-toggle
+            include ../_elements/_icon/_icon.pug
+            - const iconSearch = {
+            -   src: '../assets/images/icons/icon-search.png',
+            -   alt: 'search',
+            - }
+            +icon(iconSearch)
+            - const iconEye = {
+            -   src: '../assets/images/icons/icon-eye.png',
+            -   alt: 'icon eye',
+            - }
+            +icon(iconEye)
+            include ../_elements/_menu/_menu-toggle
+            +menu-toggle
+    .page-header__bottom
+        .page-header__content.container
+            include ../_elements/_menu/_menu
+            -
+                const menuMain = [
+                    {
+                        class: 'menu-main__link menu-main__link--accent',
+                        link: 'programmes.html',
+                        text: 'All Programmes'
+                    },
+                    {
+                        class: 'menu-main__link',
+                        link: 'admissin.html',
+                        text: 'Admission'
+                    },
+                    {
+                        class: 'menu-main__link',
+                        link: 'education.html',
+                        text: 'Education'
+                    },
+                    {
+                        class: 'menu-main__link',
+                        link: 'research_and_innovation.html',
+                        text: 'Research & Innovation'
+                    },
+                    {
+                        class: 'menu-main__link',
+                        link: 'partnership.html',
+                        text: 'Partnership'
+                    },
+                    {
+                        class: 'menu-main__link',
+                        link: 'career_and_job.html',
+                        text: 'Career & Job'
+                    },
+                    {
+                        class: 'menu-main__link',
+                        link: 'alumni.html',
+                        text: 'Alumni'
+                    },
+
+                ]
+            +menuMain
+
+
+
+

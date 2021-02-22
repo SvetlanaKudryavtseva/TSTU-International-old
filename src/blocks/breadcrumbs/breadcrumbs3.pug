@@ -1,0 +1,27 @@
+.breadcrumbs
+    -
+        let linksAbout = [
+            {
+                class: 'breadcrumbs__link',
+                link: 'index.html',
+                text: 'Home'
+            },
+            {
+                class: 'breadcrumbs__link',
+                link: 'about.html',
+                text: 'About TSTU'
+            },
+            {
+                class: 'breadcrumbs__link',
+                link: 'mission.html',
+                text: 'Mission & Vision'
+            },
+            {
+                class: 'breadcrumbs__link',
+                link: 'history.html',
+                text: 'History'
+            },
+        ]
+        if (pageClass === 'about-page') {
+            +links(linksAbout)
+        }

@@ -1,0 +1,65 @@
+/* Mixins:
+  ========================================================================== */
+
+// px to rem
+@function rem($pixels, $context: $font-size-main) {
+    @if (unitless($pixels)) {
+        $pixels: $pixels * 1px;
+    }
+    @if (unitless($context)) {
+        $context: $context * 1px;
+    }
+    @return $pixels / $context * 1rem;
+}
+
+// size to one line
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+// placeholder helper
+@mixin placeholder {
+     ::-webkit-input-placeholder {
+        @content;
+    }
+     :-moz-placeholder {
+        @content;
+    }
+     ::-moz-placeholder {
+        @content;
+    }
+     :-ms-input-placeholder {
+        @content;
+    }
+}
+
+//Font
+@mixin font-face( $font-family, $file-path, $weight: normal, $style: normal, $asset-pipeline: false) {
+    @font-face {
+        font-family: $font-family;
+        font-weight: $weight;
+        font-style: $style;
+        src: url("#{$file-path}.eot?#iefix") format("embedded-opentype"),
+        url("#{$file-path}.woff") format("woff"),
+        url("#{$file-path}.woff2") format("woff2"),
+        url("#{$file-path}.svg") format("svg"),
+        url("#{$file-path}.ttf") format("truetype");
+    }
+}
+
+//Centerer
+@mixin centerer {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+//Left-centerer 
+@mixin left-centerer {
+    position: absolute;
+    top: 42.5%;
+    left: 5%;
+    //transform: translate(-50%, -50%);
+}

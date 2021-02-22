@@ -1,0 +1,37 @@
+//-mixin menuGloItems(isClass, el)
+    li(class="menuGlo__item " + isClass)
+        a(href=el.url, class=el.class) #{el.text} 123
+//-.menuGlo
+    ul.menuGlo__list.js-menuGlo-button
+        -
+            let menuGlo = [
+                {url:"#test.html", text: "Тест", class: "menuGlo__link"},
+                {url:"#about.html", text: "Страница1", class: "menuGlo__link"},
+                {url:"#institutes", text: "Страница2", class: "menuGlo__link"},
+                {url:"#international", text: "Страница3", class: "menuGlo__link"},
+                {url:"#life", text: "Страница4", class: "menuGlo__link"}
+            ]
+        -   let isPageGlo = 3;
+        each el,i in menuGlo
+            if isPageGlo === i
+                +menuGloItems("is-active", el)
+            else
+                +menuGloItems("", el)
+//-.menuGlo
+    ul.menuGlo__list.js-menuGlo-button
+        -
+            let menuGlo = [
+                {url:"#test.html", text: "Тест", class: "menuGlo__link"},
+                {url:"#about.html", text: "Страница1", class: "menuGlo__link"},
+                {url:"#institutes", text: "Страница2", class: "menuGlo__link"},
+                {url:"#international", text: "Страница3", class: "menuGlo__link"},
+                {url:"#life", text: "Страница4", class: "menuGlo__link"}
+            ]
+        -   let isPageGlo = 3;
+        each el,i in menuGlo
+            if isPageGlo === i
+                li.menuGlo__item.is-active
+                    a(href=el.url, class=el.class) #{el.text}
+            else
+                li.menuGlo__item
+                    a(href=el.url, class=el.class) #{el.text}

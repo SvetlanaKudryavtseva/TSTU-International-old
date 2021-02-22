@@ -1,0 +1,25 @@
+.number-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.number-list__item {
+    width: 100px;
+    height: 100px;
+    border: solid 2px #5c5c5c;
+    text-align: center;
+    list-style: 100px;
+    font-size: 30px;
+}
+
+.mod-red {
+    background-color: rgba($color: red, $alpha: 0.5);
+}
+
+.mod-green {
+    background-color: rgba($color: green, $alpha: 0.5);
+}
+
+.mod-blue {
+    background-color: rgba($color: blue, $alpha: 0.5);
+}

@@ -1,0 +1,23 @@
+.lang {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &__link {
+        padding-right: 18px;
+        color: $color-secondary;
+        text-decoration: none;
+        @media screen and (min-width: $desktop-sm) {
+            padding-right: 10px;
+        }
+        @media screen and (min-width: $desktop-sm) {
+            padding-right: 14px;
+        }
+        &__link:hover {
+            color: $color-primary;
+            background-color: $color-secondary;
+        }
+    }
+    &__link:last-child {
+        padding-right: 0px;
+    }
+}
