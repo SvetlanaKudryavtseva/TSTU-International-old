@@ -1,7 +1,6 @@
 node_modules
 dist
 debug.log
-test.js
 workspace.TSTU-International.code-workspace
 sftp.json
 webpack.common1.js
