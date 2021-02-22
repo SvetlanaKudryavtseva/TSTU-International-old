@@ -1,0 +1,31 @@
+section.diploma.container
+    - const sectionTitle = {
+    -   title: 'Diploma Supplement'
+    - }
+    +section(sectionTitle)
+        .colums
+            .colums__col50
+                - const sectionImg = {
+                -   src: '../assets/images/TSTU_diploma_supplement-min.jpg',
+                -   alt: 'Diploma Supplement',
+                - }
+                +section(sectionImg)
+            .colums__col50
+                - const sectionText = {
+                -   textBold: 'TSTU graduates can obtain the European Diploma Supplement.',
+                -   textRegular: 'The Diploma Supplement (DS) is a document accompanying a higher education diploma. It is produced by TSTU according to standards agreed by the European Commission, the Council of Europe and UNESCO.',
+                - }
+                +section(sectionText)
+                .button-block
+                    - const buttonBlue = {
+                    -   color: false,
+                    -   text: 'Learn more'
+                    -   }
+                    +button(buttonBlue)
+
+                    - const button = {
+                    -   color: true,
+                    -   text: 'Order'
+                    -   }
+                    +button(button)
+

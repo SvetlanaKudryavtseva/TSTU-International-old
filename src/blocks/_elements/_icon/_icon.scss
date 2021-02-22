@@ -1,0 +1,11 @@
+.icon {
+    margin: 0 auto;
+    display: none;
+    @media screen and (min-width: $desktop-sm) {
+        display: flex;
+    }
+    &__img {
+        width: 30px;
+        height: 30px;
+    }
+}

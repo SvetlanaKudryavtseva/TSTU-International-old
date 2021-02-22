@@ -1,0 +1,6 @@
+mixin menuMain(item)
+    <!-- begin menu__main -->
+    .menu-main
+        each item in menuMain
+            a(class=item.class, href=item.link)= item.text
+    <!-- end menu__main -->

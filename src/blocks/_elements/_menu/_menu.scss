@@ -1,0 +1,28 @@
+.menu-main {
+    display: none;
+    padding: 10px 0;
+    @media screen and (min-width: $desktop-sm) {
+        padding: 10px 0;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    &__link {
+        font-size: $font-size-m;
+        padding-right: 38px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $color-primary;
+        @media screen and (min-width: $desktop-sm) {
+            padding-right: 24px;
+        }
+        @media screen and (min-width: $desktop) {
+            padding-right: 32px;
+        }
+        @media screen and (min-width: $desktop-lg) {
+            padding-right: 38px;
+        }
+    }
+    &__link--accent {
+        color: $color-accent;
+    }
+}

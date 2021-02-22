@@ -1,0 +1,28 @@
+.social {
+    display: flex;
+    flex-wrap: wrap;
+    &__link {
+        padding-right: 10px;
+        text-decoration: none;
+        color: $color-secondary;
+        @media screen and (min-width: $desktop-sm) {
+            padding-right: 8px;
+        }
+        @media screen and (min-width: $desktop) {
+            padding-right: 10px;
+        }
+    }
+    &__img {
+        @media screen and (min-width: $desktop-sm) {
+            padding-top: 7px;
+            max-width: 30px;
+        }
+        @media screen and (min-width: $desktop) {
+            padding-top: 10px;
+            max-width: 35px;
+        }
+        @media screen and (min-width: $desktop-lg) {
+            max-width: 40px;
+        }
+    }
+}

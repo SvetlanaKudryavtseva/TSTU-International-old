@@ -1,0 +1,17 @@
+.breadcrumbs {
+    margin-top: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $neutral-secondary;
+    &__link {
+        color: $color-primary;
+    }
+    &__link--active {
+        color: $neutral-secondary;
+    }
+    &__link+&__link:before {
+        padding: 0 15px 0 15px;
+        color: $neutral-secondary;
+        /* content: "/\00a0"; */
+        content: ">";
+    }
+}

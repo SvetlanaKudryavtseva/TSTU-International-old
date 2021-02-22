@@ -1,0 +1,31 @@
+.button {
+    width: 12.5rem;
+    margin: 0 auto;
+    background-color: $color-accent;
+    padding: 0.7rem 3rem;
+    text-align: center;
+    color: $color-secondary;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    @media screen and (min-width: $tablet-sm) {
+        width: 16rem;
+    }
+    @media screen and (min-width: $tablet) {
+        width: 10rem;
+        font-size: 14px;
+        padding: 0.5rem 2rem;
+    }
+    @media screen and (min-width: $desktop-lg) {
+        width: 16rem;
+        font-size: 16px;
+        padding: 0.7rem 3rem;
+    }
+    &--blue {
+        background-color: $color-light;
+    }
+    &:first-child {
+        @media screen and (min-width: $tablet) {
+            margin-right: 5px;
+        }
+    }
+}

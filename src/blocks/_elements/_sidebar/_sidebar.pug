@@ -1,0 +1,5 @@
+mixin sidebar(list, item)
+    ul(class=list.class)
+        each item in sidebar
+            li.sidebar__item
+                a(class=item.class, href=item.link)= item.text

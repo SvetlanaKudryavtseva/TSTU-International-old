@@ -1,0 +1,49 @@
+.banner {
+    height: 60vh;
+    overflow: hidden;
+    position: relative;
+    @media screen and (min-width: $desktop-sm) {
+        height: 40vh;
+    }
+    &__item {
+        display: flex;
+        transition: transform 400ms, opacity 200ms;
+        transform: scale(1.1);
+        will-change: transform;
+        object-position: center center;
+        object-fit: cover;
+    }
+    &__item:hover {
+        transform: scale(1.03);
+    }
+    &__img {
+        position: relative;
+        min-width: 100%;
+        top: -100px;
+    }
+    &__title {
+        margin-bottom: 20px;
+        display: inline-block;
+        color: #fff;
+        font-size: 40px;
+        font-weight: 900;
+        line-height: 1.2;
+        @media screen and (min-width: $tablet) {
+            font-size: 50px;
+        }
+        @media screen and (min-width: $desktop-sm) {
+            font-size: 60px;
+        }
+        @media screen and (min-width: $desktop) {
+            font-size: 70px;
+        }
+        &--white {
+            display: block;
+            color: #ffffff;
+        }
+        &--orange {
+            display: block;
+            color: #F36F31;
+        }
+    }
+}

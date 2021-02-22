@@ -1,0 +1,24 @@
+.biography {
+    &__img {
+        width: 300px;
+        float: left;
+        padding-right: 20px;
+    }
+    &__list-item {
+        padding-bottom: 20px;
+    }
+    &__period {
+        display: inline-block;
+        font-weight: bold;
+        width: 350px;
+    }
+    &__text {
+        display: inline-block;
+    }
+    &__contacts {
+        padding-top: 15px;
+    }
+    &__contacts-item {
+        padding-bottom: 5px;
+    }
+}

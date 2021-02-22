@@ -1,0 +1,6 @@
+mixin button(buttonData)
+    .button(class=buttonData.color ? '' : 'button--blue')
+        a.button__link= buttonData.link
+            span.button__text= buttonData.text
+
+
