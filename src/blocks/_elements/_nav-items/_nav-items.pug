@@ -1,0 +1,5 @@
+mixin navItems(list, item, link, isClass)
+    ul(class=list.class)
+        each link,i in navLinks
+            li(class=item.class + " " + isClass)
+                a(href=link.url, class=link.class) #{link.text}
