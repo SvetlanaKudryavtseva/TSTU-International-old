@@ -1,0 +1,16 @@
+.page-top
+    .container
+        p Page top
+            -
+                let navLinks = [
+                    {url:"#index.html", text: "About TSTU", class: "naw__link"},
+                    {url:"#about.html", text: "Страница1", class: "naw__link"},
+                    {url:"#institutes", text: "Страница2", class: "naw__link"},
+                    {url:"#international", text: "Страница3", class: "naw__link"},
+                    {url:"#life", text: "Страница4", class: "naw__link"}
+                ]
+            -   let isPageGlo = 3;
+            if isPageGlo === i
+                +navItems("naw__list", "naw__item", link, "is-active")
+            else
+                +navItems("naw__list", "naw__item", link, "")

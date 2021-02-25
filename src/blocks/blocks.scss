@@ -1,6 +1,7 @@
 // Import of elements styles
 @import "./_elements/_elements";
 // Import of blocks styles
+@import "./page-top/page-top";
 @import "./header/header";
 @import "./promo/promo";
 @import "./breadcrumbs/breadcrumbs";
@@ -8,4 +9,5 @@
 @import "./diploma/diploma";
 @import "./aside/aside";
 @import "./footer/footer";
+@import "./person/person";
 @import "./biography/biography";

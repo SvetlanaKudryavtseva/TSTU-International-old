@@ -1,0 +1,10 @@
+.page-top {
+    margin: 0 auto;
+    width: 100%;
+    display: none;
+    @media screen and (min-width: $desktop-sm) {
+        display: block;
+        background-color: $color-primary;
+        font-size: $font-size-main;
+    }
+}
