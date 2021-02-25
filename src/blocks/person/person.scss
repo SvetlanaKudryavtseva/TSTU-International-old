@@ -1,0 +1,54 @@
+.person {
+    display: flex;
+    flex-wrap: wrap;
+    &__item {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 20px;
+        flex: 1;
+        align-items: stretch;
+        justify-items: center;
+        justify-content: center;
+        @media screen and (min-width: $desktop-sm) {
+            display: flex;
+        }
+        @media screen and (min-width: $desktop) {
+            display: block;
+        }
+    }
+    &__img {
+        display: block;
+        max-width: 350px;
+        padding-bottom: 10px;
+        @media screen and (min-width: $desktop-sm) {
+            padding-right: 20px;
+            max-width: 250px;
+        }
+        @media screen and (min-width: $desktop) {
+            max-width: 350px;
+        }
+    }
+    &__name {
+        font-size: 27px;
+        color: $color-primary;
+        padding-bottom: 8px;
+    }
+    &__link {
+        color: $color-primary;
+        text-decoration: underline;
+    }
+    &__position {
+        font-size: 18px;
+        padding-bottom: 5px;
+    }
+    &__rank {
+        font-weight: 300;
+        font-size: 14px;
+        padding-bottom: 8px;
+    }
+    &__contacts-item {
+        font-size: 14px;
+        font-weight: 300;
+        padding-bottom: 5px;
+    }
+}
