@@ -1,0 +1,29 @@
+<!-- begin filters -->
+//- p FILTERS
+.sidebar
+    -   let block = 'sidebar'
+    //- class for ul or ol list
+    -
+        let list = {
+            class: #{block}+'__list',
+        }
+    //- atributes for li and a elements of the list
+    -
+        let listElements = [
+            {
+                itemClass: 'filters__item',
+                itemActive:'filters__item--active',
+                linkClass: 'filters__link',
+                linkUrl: 'mission-and-vision.html',
+                linkText: 'Vision'
+            },
+            {
+                itemClass: 'filters__item',
+                itemActive:'filters__item--active',
+                linkClass: 'filters__link',
+                linkUrl: 'history.html',
+                linkText: 'History'
+            },
+        ]
+    +list(list, el)
+<!-- end filters -->
