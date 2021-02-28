@@ -1,0 +1,9 @@
+mixin list(listName, el, active)
+    ul(class=listName+'__list')
+        each el,i in listElements
+            if isPage === i
+                li(class=listName+'__item'+' '+active)
+                    a(class=listName+'__link', href=el.url) #{el.text}
+            else
+                li(class=listName+'__item'+' '+active)
+                    a(class=listName+'__link', href=el.url) #{el.text}

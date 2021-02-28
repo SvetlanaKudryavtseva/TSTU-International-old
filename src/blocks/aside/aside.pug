@@ -5,9 +5,13 @@ aside.sidebar
             class: 'sidebar__list',
         }
     -
+        let active = {
+            class: 'sidebar__link--active',
+        }
+    -
         let sidebar = [
             {
-                class: 'sidebar__link sidebar__link--active',
+                class: 'sidebar__link',
                 link: 'mission-and-vision.html',
                 text: 'Mission & Vision'
             },
@@ -38,4 +42,6 @@ aside.sidebar
             },
         ]
     +sidebar(list, item)
+
+
 <!-- end sidebar -->
