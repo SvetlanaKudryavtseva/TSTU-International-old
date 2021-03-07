@@ -1,0 +1,43 @@
+<!-- begin menu-bottom -->
+.menu-bottom
+//-p MENU BOTTOM
+.menu-bottom
+    //- name of ul or ol list to use with BEM naming
+    -   let listName = 'menu-bottom';
+    //- name of an active state of an item in the list
+    -   let active = listName+'__item--active';
+    //- atributes for link elements of the list
+    -   let accent = listName+'__link--accent';
+    -
+        let listElements = [
+            {
+                url: 'programmes.html',
+                text: 'All Programmes'
+            },
+            {
+                url: 'admission.html',
+                text: 'Admission'
+            },
+            {
+                url: 'education.html',
+                text: 'Education'
+            },
+            {
+                url: 'research_and_innovation.html',
+                text: 'Research & Innovation'
+            },
+            {
+                url: 'partnership.html',
+                text: 'Partnership'
+            },
+            {
+                url: 'career-and-job.html',
+                text: 'Career & Job'
+            },
+            {
+                url: 'alumni.html',
+                text: 'Alumni'
+            },
+        ]
+    +list(listName, el, active, accent)
+<!-- end menu-bottom -->
