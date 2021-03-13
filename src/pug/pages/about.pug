@@ -3,6 +3,7 @@ block variables
     - var description = 'About Tambov State Technical University - Tambov State Technical University'
     - var title = 'About Tambov State Technical University'
     - var pageClass = 'about-page'
+    - var pageKey = 'about'
 
 //-block promo
     include ../../blocks/promo/promo
@@ -13,9 +14,10 @@ block content
     section.about
         h3.section__title About TSTU
         .colums
-            .colums__col30
-                include ../../blocks/aside/aside
-            .colums__col70
+            aside.colums__col30
+                -   var section = 'about'
+                include ../../blocks/sidebar/sidebar
+            main.colums__col70
                 p.section__text Tambov State Technical University is considered to be one of the largest educational institutions in the region. It was founded in 1958 as the Tambov affiliate of Moscow Institute of Chemical Engineering and called Tambov Institute of Chemical Engineering. 
                 p.section__text In 1993 the Institute was renamed into Tambov State Technical University. More than 55 000 specialists with diplomas of higher education have been trained during 62 years of university existence.
                 p.section__text Many university graduates head large industrial enterprises and institutions of the Tambov region as well as other Russian areas. Now the university presents itself an integral system of continuous education including preschool, school, university and post-graduate levels. The basic principles of this system are: availability of education for all social groups, life-long character of education, combination of humanitarian and technical courses.

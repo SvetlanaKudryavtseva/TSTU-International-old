@@ -1,0 +1,12 @@
+mixin list(listName, el, active, accent)
+    ul(class=listName+'__list')
+        each el,i in listElements
+            if isPage === i
+                li(class=listName+'__item'+' '+active)
+                    a(class=listName+'__link', href=el.url) #{el.text}
+            else
+                li(class=listName+'__item')
+                    if i === 0
+                        a(class=listName+'__link'+' '+accent, href=el.url) #{el.text}
+                    else
+                        a(class=listName+'__link', href=el.url) #{el.text}

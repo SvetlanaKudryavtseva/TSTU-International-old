@@ -1,0 +1,11 @@
+mixin list(data)
+    ul
+        each val in data
+            li= val.title
+            if val.sublevel === true
+                ul
+                    each val_sub in val.items
+                        li= val_sub.title
+
+
+

@@ -1,0 +1,99 @@
+extends ../layout/layout-inner
+block variables
+    - var description = 'Programmes of TSTU - Tambov State Technical University, Bachelor Degree, Master Degree, Specialist Qualification, Master Degree in English Language, PhD'
+    - var title = 'Programmes of TSTU - Tambov State Technical University'
+    - var pageClass = 'programmes-page'
+
+//-block promo
+    include ../../blocks/promo/promo
+block content
+    .breadcrumbs.bt-blue 
+        a(href="index.html" class="breadcrumbs__link") Home
+        a(href="#" class="breadcrumbs__link breadcrumbs__link--active") All Programmes
+    section.about
+        h3.section__title All Programmes
+        .colums
+            aside.colums__col30
+                include ../../blocks/filters/filters
+            main.colums__col70
+                .programmes
+                    h3.programmes__title Bachelor Degree Programmes
+                    table.programme__table
+                        thead
+                            tr
+                                td
+                                    p Code
+                                td(colspan = 3)
+                                    p Programme
+                                td(colspan = 2)
+                                    p Institute
+                                td
+                                    p Language of Study
+                                td
+                                    p Tuition Fees
+                        tbody
+                            tr
+                                td 05.06.03
+                                td(colspan = 7)
+                                    p
+                                        strong Ecology and nature management
+                            tr
+                                td
+                                td(colspan = 3)
+                                    p Environmental safety
+                                td(colspan = 2) Institute of Automation and Information Technologies
+                                td Russian
+                                td 3100$
+                            //- Next programme
+                            tr
+                                td 07.03.01
+                                td(colspan = 7)
+                                    p
+                                        strong Architecture
+                            tr
+                                td
+                                td(colspan = 3)
+                                    p Architectural design
+                                td(colspan = 2) Institute of Automation and Information Technologies
+                                td Russian
+                                td 3100$
+                            //- Next programme
+                            tr
+                                td 07.03.01
+                                td(colspan = 7)
+                                    p
+                                        strong Construction
+                            tr
+                                td
+                                td(colspan = 3)
+                                    p Industrial and civil construction
+                                td(colspan = 2) Institute of Automation and Information Technologies
+                                td Russian
+                                td 3100$
+                            tr
+                                td
+                                td(colspan = 3)
+                                    p Moto roads
+                                td(colspan = 2) Institute of Automation and Information Technologies
+                                td Russian
+                                td 3100$
+                            //- Next programme
+                            tr
+                                td 09.03.01
+                                td(colspan = 7)
+                                    p
+                                        strong Construction
+                            tr
+                                td
+                                td(colspan = 3)
+                                    p Industrial and civil construction
+                                td(colspan = 2) Institute of Automation and Information Technologies
+                                td Russian
+                                td 3100$
+                            tr
+                                td
+                                td(colspan = 3)
+                                    p Moto roads
+                                td(colspan = 2) Institute of Automation and Information Technologies
+                                td Russian
+                                td 3100$

@@ -1,0 +1,37 @@
+<!-- begin sidebar -->
+p SIDEBAR
+.sidebar
+    //- name of ul or ol list to use with BEM naming
+    -   let listName = 'sidebar';
+    //- name of an active state of an item in the list
+    -   let active = listName+'__item--active';
+    //- atributes for link elements of the list
+    -
+        let listElements = [
+            {
+                url: 'mission-and-vision.html',
+                text: 'Mission & Vision'
+            },
+            {
+                url: 'history.html',
+                text: 'History'
+            },
+            {
+                url: 'rector.html',
+                text: 'Rector'
+            },
+            {
+                url: 'administration.html',
+                text: 'Administration'
+            },
+            {
+                url: 'campus.html',
+                text: 'Campus'
+            },
+            {
+                url: 'rankings.html',
+                text: 'Rankings'
+            },
+        ]
+    +list(listName, el, active)
+<!-- end sidebar -->

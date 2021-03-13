@@ -1,0 +1,102 @@
+<!-- begin sidebar -->
+.sidebar
+    //- name of ul or ol list to use with BEM naming
+    -   let listName = 'sidebar';
+    -
+        let data = [
+            {
+                key: 'about',
+                title: 'About TSTU',
+                items: [
+                    {
+                        key_sub: 'about',
+                        url: 'mission-and-vision.html',
+                        title: 'Mission & Vision'
+                    },
+                    {
+                        key_sub: 'about',
+                        url: 'history.html',
+                        title: 'History'
+                    },
+                    {
+                        key_sub: 'about',
+                        url: 'rector.html',
+                        title: 'Rector'
+                    },
+                    {
+                        key_sub: 'about',
+                        url: 'administration.html',
+                        title: 'Administration'
+                    },
+                    {
+                        key_sub: 'about',
+                        url: 'campus.html',
+                        title: 'Campus'
+                    },
+                    {
+                        key_sub: 'about',
+                        url: 'rankings.html',
+                        title: 'Rankings'
+                    },
+                ]
+            },
+            {
+                key: 'institutes',
+                title: 'Institutes and Faculties',
+                items: [
+                    {
+                        key_sub: 'institutes',
+                        url: '#',
+                        title: 'Institute of Automation and Information Technologies'
+                    },
+                    {
+                        key_sub: 'institutes',
+                        url: '#',
+                        title: 'Institute of Architecture, Civil Engineering and Transportstory'
+                    },
+                    {
+                        key_sub: 'institutes',
+                        url: '#',
+                        title: 'Institute of Economics and Quality of Life'
+                    },
+                    {
+                        key_sub: 'institutes',
+                        url: '#',
+                        title: 'Institute of Power Engineering, Tool Engineering and Radio Electronics'
+                    },
+                    {
+                        key_sub: 'institutes',
+                        url: '#',
+                        title: 'Technological Institute'
+                    },
+                    {
+                        key_sub: 'institutes',
+                        url: '#',
+                        title: 'Institute of Law'
+                    },
+                                        {
+                        key_sub: 'institutes',
+                        url: '#',
+                        title: 'Institute of Study by Correspondence'
+                    },
+                    {
+                        key_sub: 'institutes',
+                        url: '#',
+                        title: 'Institute of Additional Professional Education'
+                    },
+                    {
+                        key_sub: 'institutes',
+                        url: '#',
+                        title: 'Faculty of Natural and Social Sciences'
+                    },
+                    {
+                        key_sub: 'institutes',
+                        url: '#',
+                        title: 'International Education Faculty'
+                    },
+                ]
+            },
+        ]
+    +list__sub(data, listName)
+
+<!-- end sidebar -->

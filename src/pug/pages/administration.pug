@@ -2,7 +2,8 @@ extends ../layout/layout-inner
 block variables
     - var description = 'Administration of TSTU - Tambov State Technical University'
     - var title = 'Administration of Tambov State Technical University'
-    - var pageClass = 'administrationr-page'
+    - var pageClass = 'administration-page'
+    - var pageKey = 'about'
 
 //-block promo
     include ../../blocks/promo/promo
@@ -14,8 +15,8 @@ block content
     section.about
         h3.section__title Administration
         .colums
-            .colums__col30
-                include ../../blocks/aside/aside
-            .colums__col70
+            aside.colums__col30
+                include ../../blocks/sidebar/sidebar
+            main.colums__col70
                 .content
                     include ../../blocks/person/person

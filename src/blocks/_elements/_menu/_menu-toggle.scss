@@ -43,3 +43,7 @@
 .menu-toggle:hover .line {
     width: 2.3rem;
 }
+
+#toggle:checked+.menu-main {
+    display: block;
+}
