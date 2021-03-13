@@ -1,0 +1,19 @@
+mixin list(data)
+    ul
+        //- output of main level list items
+        each val in data
+            li= val.title
+            //- checking the existens of sublevel list items
+            if val.sublevel === true
+                ul
+                    each val_sub in val.items
+                        li= val_sub.title
+            //- checking the existens of onlySunLevel variable
+            else if val.onlySubLevel === true
+                //- output only of sublevel list items
+                each val in data
+                    li
+                    if val.title === pageClass
+                        ul
+                            each val_sub in val.items
+                                li= val_sub.title

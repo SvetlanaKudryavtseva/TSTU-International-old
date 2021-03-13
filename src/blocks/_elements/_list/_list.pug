@@ -1,12 +1,21 @@
-mixin list(listName, el, active, accent)
+mixin list(listName, ...atributes)
     ul(class=listName+'__list')
-        each el,i in listElements
-            if isPage === i
-                li(class=listName+'__item'+' '+active)
-                    a(class=listName+'__link', href=el.url) #{el.text}
-            else
-                li(class=listName+'__item')
-                    if i === 0
-                        a(class=listName+'__link'+' '+accent, href=el.url) #{el.text}
-                    else
-                        a(class=listName+'__link', href=el.url) #{el.text}
+        //- output of main level list items
+        each val in listName
+            if val.onlySub === false
+                li= val.title
+                    a= val.url
+                //- checking the existens of sublevel list items
+                if val.sublevel === true
+                    ul
+                        each val_sub in val.items
+                            li= val_sub.title
+            //- checking the existens of onlySunLevel variable
+            else if val.onlySub === true
+                //- for SIDEBAR block
+                //- output only of sublevel list items
+                li
+                if val.key === pageClass
+                    ul
+                        each val_sub in val.items
+                            li= val_sub.title
