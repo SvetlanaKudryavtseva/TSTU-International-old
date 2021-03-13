@@ -1,0 +1,33 @@
+<!-- begin sidebar -->
+p SIDEBAR
+.sidebar
+    -
+        let data = [
+            {
+                title: "Title text 1",
+                items: [
+                    {
+                        title: "Item 1"
+                    }
+                ]
+            }
+            {
+                title: "Title text 2",
+                sublevel: true,
+                items: [
+                    {
+                        title: "Item 2.1"
+                    },
+                    {
+                        title: "Item 2.2"
+                    },
+                ]
+            }
+        ]
+
+    if pageClass === 'about-page'
+        p About
+        +list
+    else if pageClass === 'institutes-page'
+        p Institutes
+<!-- end sidebar -->
