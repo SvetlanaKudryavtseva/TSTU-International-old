@@ -7,7 +7,7 @@ mixin list__sub(data, listName)
                 //-if isPage === i
                 li
                 //- сравниваем значение поля key в массиве data со значением переменной pageKey, которая прописана в шаблоне, расположенном в папке layouts
-                if val.key === pageKey
+                if val.key === sectionKey
                     ul(class=listName+'__list')
                         each val_sub in val.items
                             li(class=listName+'__item'+' '+active)

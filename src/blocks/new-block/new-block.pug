@@ -1,11 +1,15 @@
-//- 5.1 add variables for classname of the block and data values witch we are going to use in mixin
-//- 5.2 add a mixin
+//- 5.1 Add a demo mixin to check the work of the whole page
+//- 5.1.1 Name data array using your new block name for example dataNewBlock
+//- 6.1 Creat a _new-mixin folder in _elements and new-mixin.pug file
+//- 6.2 Include this new mixin file to _elements.pug
+//- 6.3 Add variables for classname of the new-block and data values witch we are going to use in mixin
+//- 6.4 Add a mixin +mixin(dataNewBlock, mixinName)
 div I am a new block
-    -   let mixinName = 'mixin name'
+    -   let class_name = 'mixin name'
     -
-        let data = [
+        let dataNewBlock = [
             {
                 text: 'I am a mixin',
             },
         ]
-    +mixin(data, mixinName)
+    +mixin(dataNewBlock, class_name)
