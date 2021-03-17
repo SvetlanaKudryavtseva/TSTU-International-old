@@ -1,14 +1,14 @@
 //- data - это массив объектов, который мы будем перебирать
+//- listName - это название класса создаваемого списка
 mixin list__sub(data, listName)
         ul(class=listName+'__list')
-            //- выводим значения  массива data
+            //- выводим значения массива data
             each val,i in data
                 //-if isPage === i
                 li
-                //- сравниваем значение поля key в массиве data со значением переменной pageClass, которая прописана
-                if val.key === pageKey
+                //- сравниваем значение поля key в массиве data со значением переменной pageKey, которая прописана в шаблоне, расположенном в папке layouts
+                if val.key === sectionKey
                     ul(class=listName+'__list')
                         each val_sub in val.items
                             li(class=listName+'__item'+' '+active)
                                 a(class=listName+'__link', href=val_sub.url)= val_sub.title
-                            

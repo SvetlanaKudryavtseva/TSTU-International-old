@@ -1,0 +1,28 @@
+//-1. Create a new-page.pug in PAGES folder
+//-1.1. Add a layout and variables to new-page.pug using one of the layout located in the folder LAYOUT
+extends ../layout/layout-inner
+block variables
+    - var description = 'description - Tambov State Technical University'
+    - var title = 'Page Title'
+    - var pageClass = 'class-of-page'
+    - var sectionKey = 'key-for-sidebar'
+
+//-1.2. Add page content structure
+block content
+    //-2. Create in blocks > a folder (name-of-new-block-folder) > and pug and scss files inside this folder
+    //-2.1 Import created scss file to blocks.scss
+    .breadcrumbs.bt-blue
+        a(href="index.html" class="breadcrumbs__link") Home
+        a(href="#" class="breadcrumbs__link breadcrumbs__link--active") Name-of-section
+    section.name-of-section
+
+        //-4. include created pug file of this new block or exsisted blocks to the page
+        include ../../blocks/new-block/new-block
+        //- 5.1 add a demo mixin or existing mixin to check the work of the whole page
+        //- 5.1.1 name data array using your new block name for example dataNewBlock
+        //- 6.1 Creat a _new-mixin folder in _elements and new-mixin.pug file
+        //- 6.2 Include this new mixin file to _elements.pug
+        //- 6.3 Add variables for classname of the new-block and data values witch we are going to use in mixin
+        //- 6.4 Add a mixin +mixin(dataNewBlock, mixinName) in new-block.pug
+        //-7.1 create css styles in new-block.scss file in BLOCKS folder
+

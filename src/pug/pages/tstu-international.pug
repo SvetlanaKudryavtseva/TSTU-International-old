@@ -1,0 +1,31 @@
+extends ../layout/layout-inner
+block variables
+    - var description = 'Intenational partnership and cooperation of TSTU - Tambov State Technical University, Intenational educational programmes at Tambov State Technical University'
+    - var title = 'TSTU International'
+    - var pageClass = 'international-page'
+    - var sectionKey = 'international'
+
+//-block promo
+    include ../../blocks/promo/promo
+block content
+    .breadcrumbs.bt-blue 
+        a(href="index.html" class="breadcrumbs__link") Home
+        a(href="#" class="breadcrumbs__link breadcrumbs__link--active") TSTU International
+    section.about
+        h3.section__title TSTU International
+        .colums
+            .colums__col30
+                include ../../blocks/sidebar/sidebar
+            .colums__col70
+                .section__img-container
+                    img.section__img1(src='../assets/images/tstu-international.jpg')
+                p.section__text The international cooperation and internationalization are among the main priorities of Tambov State Technical University development strategy.
+                p.section__text The international activities of the University are divided into following directions:
+                ul.section__list
+                    li International students training
+                    li International project coordinating
+                    li Foreign language training
+                    li Two-language learning
+                    li Academic mobility organizing
+                p.section__text Our specialists realize a whole range of applied research projects collaborating with their partners from Germany, Japan, Slovakia etc. 
+                p.section__text The university is an active participant of the international educational initiatives such as ERASMUS and TEMPUS. TSTU has successfully implemented 13 EC-funded projects in the frame of these programmes.
