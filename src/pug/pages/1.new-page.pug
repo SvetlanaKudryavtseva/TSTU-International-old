@@ -1,0 +1,22 @@
+//-1.1. Add a layout and variables
+extends ../layout/layout-inner
+block variables
+    - var description = 'description - Tambov State Technical University'
+    - var title = 'Page Title'
+    - var pageClass = 'class-of-page'
+    - var pageKey = 'key-for-sidebar'
+
+//-1.2. Add page content structure
+block content
+    //-2. Create in blocks > a folder (name-of-new-block-folder) > and pug and scss files inside this folder
+    //-2.1 Import created scss file to blocks.scss
+    .breadcrumbs.bt-blue
+        a(href="index.html" class="breadcrumbs__link") Home
+        a(href="#" class="breadcrumbs__link breadcrumbs__link--active") Name-of-section
+    section.name-of-section
+        //-4. include created pug file of this new block or exsisted blocks to the page
+        include ../../blocks/new-block/new-block
+        //-5.1 add variables for classname of the block and data values witch we are going to use in mixin
+        //-5.2 add mixin in new-block.pug
+            +mixin
+

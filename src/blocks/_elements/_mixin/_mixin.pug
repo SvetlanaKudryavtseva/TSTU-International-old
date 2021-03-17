@@ -1,2 +1,3 @@
-mixin mixin()
-    p I am a mixin
+mixin mixin(data, mixinName)
+    each val,i in data
+        p(class=mixinName) #{val.text}

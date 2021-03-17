@@ -1,0 +1,11 @@
+//- 5.1 add variables for classname of the block and data values witch we are going to use in mixin
+//- 5.2 add a mixin
+div I am a new block
+    -   let mixinName = 'mixin name'
+    -
+        let data = [
+            {
+                text: 'I am a mixin',
+            },
+        ]
+    +mixin(data, mixinName)
