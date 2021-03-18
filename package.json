@@ -1,12 +1,7 @@
 {
     "name": "webpack_git_js_react",
-    <<
-    << << < HEAD "version": "0.3.0",
-    ===
-    === =
     "version": "0.3.0",
-    >>>
-    >>> > release / release_0 .3 .0 "description": "",
+    "description": "",
     "main": "index.js",
     "scripts": {
         "build": "webpack --config ./build/webpack.build.js",
