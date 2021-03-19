@@ -26,7 +26,8 @@ html {
 
 // стили для h1 нахадятся blocks/_elements/_brand/_brand.scss
 // h1 {} = .brand__name
-h2 {
+
+/*h2 {
     font-family: $font-main;
     color: $color-primary;
     font-weight: $font-weight-light;
@@ -51,6 +52,7 @@ h3 {
     padding-top: 30px;
     padding-bottom: 30px;
 }
+*/
 
 a {
     text-decoration: none;
@@ -101,9 +103,42 @@ ul {
             flex-direction: row;
         }
     }
-    &__title {
+    &__indextitle {
         padding-top: 3rem;
         padding-bottom: 1rem;
+        font-family: $font-main;
+        color: $color-primary;
+        font-weight: $font-weight-light;
+        font-size: $font-size-xl;
+        text-align: center;
+        @media screen and (min-width: $tablet) {
+            font-size: 38px;
+        }
+        @media screen and (min-width: $desktop) {
+            font-size: 48px;
+        }
+        @media screen and (min-width: $desktop) {
+            font-size: 56px;
+        }
+    }
+    &__title {
+        font-family: $font-main;
+        color: $color-primary;
+        font-weight: $font-weight-light;
+        font-size: 40px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    &__innertitle {
+        font-weight: $font-weight-bold;
+        font-size: 20px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    &__innertitle--item {
+        display: block;
     }
     &__img {
         display: block;
@@ -129,16 +164,13 @@ ul {
     &__text {
         padding-bottom: 1rem;
         @media screen and (min-width: $desktop-sm) {
-            padding-bottom: 2rem;
             font-size: 18px;
         }
         @media screen and (min-width: $desktop-lg) {
-            padding-bottom: 2rem;
-            font-size: 18px;
+            padding-bottom: 1.1rem;
         }
         @media screen and (min-width: $desktop-xl) {
             padding-bottom: 2.5rem;
-            font-size: 18px;
         }
     }
     &__text--bold {
@@ -243,9 +275,21 @@ ul {
     display: flex;
     //used in ipet-programme.pug
     &__img {
-        width: 40%;
+        min-width: 40%;
+        max-width: 45%;
         height: auto;
         padding-right: 20px;
+    }
+    &__title {
+        font-weight: $font-weight-bold;
+        font-size: 20px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    &__title--item {
+        display: block;
     }
     //used in ipet-programme.pug
     &__logo-block {
@@ -253,6 +297,44 @@ ul {
         align-items: center;
         justify-content: center;
         padding-bottom: 20px;
+    }
+    //used in ipet-programme.pug
+    &__logo-block--item {
+        display: block;
+        max-width: 100%;
+        margin: 0 auto;
+        @media screen and (min-width: $tablet) {
+            padding-bottom: 1rem;
+        }
+        @media screen and (min-width: $desktop-xl) {
+            max-width: 70%;
+        }
+    }
+    //used in ipet-programme.pug
+    &__text {
+        padding-bottom: 1rem;
+        @media screen and (min-width: $desktop-sm) {
+            font-size: 18px;
+        }
+        @media screen and (min-width: $desktop-lg) {
+            padding-bottom: 1.1rem;
+        }
+        @media screen and (min-width: $desktop-xl) {
+            padding-bottom: 2.5rem;
+        }
+    }
+    &__text--bold {
+        font-weight: $font-weight-bold;
+        display: block;
+        @media screen and (min-width: $desktop-sm) {
+            padding-bottom: 0.5rem;
+        }
+    }
+    //used in ipet-programme.pug
+    &__list {
+        list-style-type: square;
+        padding-bottom: 1rem;
+        padding-left: 2rem;
     }
 }
 
