@@ -7,12 +7,12 @@
         @media screen and (min-width: $desktop-sm) {
             display: block;
             background-color: $color-primary;
-            font-size: $font-size-main;
+            font-size: $font-size;
             padding-top: 8px;
             padding-bottom: 8px;
         }
         @media screen and (min-width: $desktop) {
-            font-size: $font-size-main;
+            font-size: $font-size;
             padding-top: 10px;
             padding-bottom: 10px;
         }

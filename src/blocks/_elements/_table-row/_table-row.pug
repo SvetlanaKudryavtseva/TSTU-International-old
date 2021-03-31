@@ -1,0 +1,6 @@
+mixin table-row(data)
+    tr
+       each val in data
+            td #{data.content}
+            //-each val_sub in val.items
+                td #{val_sub.content}
