@@ -2,7 +2,7 @@
   ========================================================================== */
 
 // px to rem
-@function rem($pixels, $context: $font-size-main) {
+@function rem($pixels, $context: $font-size) {
     @if (unitless($pixels)) {
         $pixels: $pixels * 1px;
     }
