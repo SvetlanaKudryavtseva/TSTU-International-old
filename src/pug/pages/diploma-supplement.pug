@@ -1,0 +1,63 @@
+extends ../layout/layout-inner
+block variables
+    - var description = 'Diploma Supplement - Tambov State Technical University, standards agreed by the European Commission, the Council of Europe and UNESCO'
+    - var title = 'Diploma Supplement'
+    - var pageClass = 'diploma-supplement'
+    - var sectionKey = 'international'
+
+//-1.2. Add page content structure
+block content
+    //-2. Create in blocks > a folder (name-of-new-block-folder) > and pug and scss files inside this folder
+    //-2.1 Import created scss file to blocks.scss
+    .breadcrumbs.bt-blue
+        a(href="index.html" class="breadcrumbs__link") Home
+        a(href="tstu-international.html" class="breadcrumbs__link breadcrumbs__section-link") TSTU International
+        a(href="#" class="breadcrumbs__link breadcrumbs__link--active") Diploma Supplement
+    section 
+        h1.section__title Diploma Supplement
+        .colums
+            .colums__col30
+                include ../../blocks/sidebar/sidebar
+            .colums__col70
+                h2.content__title.content__title--top What is a Diploma Supplement?
+                p.content__text The Diploma Supplement (DS) is a document accompanying a higher education diploma, providing a standardized description of the nature, level, context, content and status of the studies completed by its holder. It is produced by the higher education institutions according to standards agreed by the European Commission, the Council of Europe and UNESCO. The Diploma Supplement is also part of the Europass framework transparency tools.
+                img.content__img--one(src='../assets/images/TSTU-diploma-supplement.jpg')
+                h2.content__title What are the benefits?
+                p.content__text
+                    b For students:
+                ul.content__list
+                    li.content__list--item a qualification that is more readable and easily comparable abroad
+                    li.content__list--item a precise description of their academic career and the competencies acquired during their studies
+                    li.content__list--item easier access to opportunities for work or further studies abroad
+                p.content__text 
+                    b For higher education institutions:
+                ul.content__list
+                    li.content__list--item more transparent qualifications
+                    li.content__list--item continued national/institutional autonomy within a common framework accepted throughout Europe
+                    li.content__list--item informed judgements about qualifications that can be understood in other educational contexts
+                    li.content__list--item greater visibility of the institution abroad
+                    li.content__list--item enhanced employment prospects for their graduates, both at home and abroad
+                h2.content__title TSTU graduates can obtain the European Diploma Supplement
+                p.content__text Diploma Supplement is issued at the individual request of any TSTU graduate student (any graduation year, specialty, mode of study) in English language.
+                p.content__text To receive the Diploma Supplement, you should submit the following documents:
+                ul.content__list
+                    li.content__list--item copy of TSTU diploma
+                    li.content__list--item copy of TSTU diploma supplement
+                    li.content__list--item application addressed to the rector
+                    li.content__list--item copy of the first page of the foreign passport
+                p.content__text The fee for a Diploma Supplement is 3730 rubles.
+                h2.content__title Another way to legalize Russian higher education diploma
+                p.content__text Another way to legalize Russian higher education diploma is to confirm the documents by "Apostille" at the Department of Education and Science of Tambov Region.
+                p.content__text Apostille affixed documents are valid on the territory of the countries, participating in the Hague Convention without additional legalization. 
+                p.content__text Read more information on 
+                    a(href="https://obraz.tmbreg.ru/podtverzhdenie-dokumentov-ob-obrazovanii-apostil") the official website of the Department of Education and Science of Tambov region.
+                h2.content__title Apply for the Diploma Supplement
+                p.content__text To apply for the Diploma Supplement or further information please contact International Relations Office
+
+                p.content__text
+                    b Address: Room 29, 106, Sovetskaya Str., Tambov, 392000, Russia
+                p.content__text
+                    b Tel: +7 (4752) 63-01-12
+                p.content__text
+                    b E-mail: post@mcms1.tstu.ru
+                

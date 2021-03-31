@@ -280,6 +280,12 @@ ul {
         height: auto;
         padding-right: 20px;
     }
+    &__img--one {
+        max-width: 75%;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+    }
     &__title {
         font-weight: $font-weight-bold;
         font-size: 20px;
@@ -287,6 +293,9 @@ ul {
         padding-bottom: 30px;
         text-align: center;
         text-transform: uppercase;
+    }
+    &__title--top {
+        padding-top: 0px;
     }
     &__title--item {
         display: block;
