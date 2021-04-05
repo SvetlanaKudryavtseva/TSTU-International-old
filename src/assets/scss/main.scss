@@ -272,9 +272,9 @@ ul {
 }
 
 .content {
-    display: flex;
     //used in ipet-programme.pug
     &__img {
+        display: flex;
         min-width: 40%;
         max-width: 45%;
         height: auto;
@@ -328,7 +328,7 @@ ul {
         }
     }
     //used in ipet-programme.pug
-    &__text {
+    p {
         padding-bottom: 1rem;
         @media screen and (min-width: $desktop-sm) {
             font-size: 18px;
@@ -348,10 +348,13 @@ ul {
         }
     }
     //used in ipet-programme.pug
-    &__list {
+    ul {
         list-style-type: square;
         padding-bottom: 1rem;
         padding-left: 2rem;
+    }
+    li {
+        padding-bottom: 1rem;
     }
     //used in ipet-programme.pug
     // Baseline styles
