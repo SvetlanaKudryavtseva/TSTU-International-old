@@ -272,20 +272,6 @@ ul {
 }
 
 .content {
-    //used in ipet-programme.pug
-    &__img {
-        display: flex;
-        min-width: 40%;
-        max-width: 45%;
-        height: auto;
-        padding-right: 20px;
-    }
-    &__img--one {
-        max-width: 75%;
-        height: auto;
-        margin: 0 auto;
-        display: block;
-    }
     &__title {
         font-weight: $font-weight-bold;
         font-size: 20px;
@@ -308,18 +294,29 @@ ul {
         text-align: left;
         text-transform: uppercase;
     }
-    //used in ipet-programme.pug
-    &__logo-block {
+    &__img-block {
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
         padding-bottom: 20px;
+        width: 100%;
     }
     //used in ipet-programme.pug
-    &__logo-block--item {
+    &__img-item--two {
+        min-width: 40%;
+        max-width: 45%;
+        height: auto;
+        padding-right: 20px;
+    }
+    //used in history.pug
+    //used in mission-and-vision.pug
+    //used in diploma-supplement.pug
+    &__img-item--one {
         display: block;
         max-width: 100%;
         margin: 0 auto;
+        //object-fit: contain;
         @media screen and (min-width: $tablet) {
             padding-bottom: 1rem;
         }
@@ -327,7 +324,6 @@ ul {
             max-width: 70%;
         }
     }
-    //used in ipet-programme.pug
     p {
         padding-bottom: 1rem;
         @media screen and (min-width: $desktop-sm) {
@@ -347,7 +343,6 @@ ul {
             padding-bottom: 0.5rem;
         }
     }
-    //used in ipet-programme.pug
     ul {
         list-style-type: square;
         padding-bottom: 1rem;
@@ -356,7 +351,6 @@ ul {
     li {
         padding-bottom: 1rem;
     }
-    //used in ipet-programme.pug
     // Baseline styles
 }
 
