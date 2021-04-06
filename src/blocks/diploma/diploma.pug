@@ -1,6 +1,6 @@
 section.diploma.container
     - const sectionTitle = {
-    -   title: 'Diploma Supplement'
+    -   indextitle: 'Diploma Supplement'
     - }
     +section(sectionTitle)
         .colums
@@ -19,7 +19,8 @@ section.diploma.container
                 .button-block
                     - const buttonBlue = {
                     -   color: false,
-                    -   text: 'Learn more'
+                    -   text: 'Learn more',
+                    -   link: 'diploma-supplement.html',
                     -   }
                     +button(buttonBlue)
 

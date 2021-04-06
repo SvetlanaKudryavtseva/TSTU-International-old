@@ -1,5 +1,10 @@
 mixin section(sectionData)
-    if (sectionData.title)
+    if (sectionData.indextitle)
+        .section
+            h2.section__indextitle= sectionData.indextitle
+            .section__description
+            block
+    else if (sectionData.title)
         .section
             h2.section__title= sectionData.title
             .section__description

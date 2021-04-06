@@ -15,42 +15,44 @@
 html {
     font-family: $font-main;
     line-height: $line-height-main;
-    font-size: $font-size-m;
+    font-size: $font-size-md;
     color: $color-default;
     background-color: #ffffff;
     overflow-y: scroll;
     @media screen and (min-width: $tablet) {
-        font-size: $font-size-m;
+        font-size: $font-size-md;
     }
 }
 
 // стили для h1 нахадятся blocks/_elements/_brand/_brand.scss
 // h1 {} = .brand__name
-h2 {
-    font-family: $font-main;
-    color: $color-primary;
-    font-weight: $font-weight-light;
-    font-size: $font-size-xl;
-    text-align: center;
-    @media screen and (min-width: $tablet) {
-        font-size: 38px;
-    }
-    @media screen and (min-width: $desktop) {
-        font-size: 48px;
-    }
-    @media screen and (min-width: $desktop) {
-        font-size: 56px;
-    }
+
+/*h2 {
+font-family: $font-main;
+color: $color-primary;
+font-weight: $font-weight-light;
+font-size: $font-size-xl;
+text-align: center;
+@media screen and (min-width: $tablet) {
+font-size: 38px;
+}
+@media screen and (min-width: $desktop) {
+font-size: 48px;
+}
+@media screen and (min-width: $desktop) {
+font-size: 56px;
+}
 }
 
 h3 {
-    font-family: $font-main;
-    color: $color-primary;
-    font-weight: $font-weight-light;
-    font-size: 40px;
-    padding-top: 30px;
-    padding-bottom: 30px;
+font-family: $font-main;
+color: $color-primary;
+font-weight: $font-weight-light;
+font-size: 40px;
+padding-top: 30px;
+padding-bottom: 30px;
 }
+*/
 
 a {
     text-decoration: none;
@@ -79,6 +81,108 @@ ul {
     }
     @media screen and (min-width: $desktop-xl) {
         width: 1560px;
+    }
+}
+
+.section {
+    padding: 2rem 1rem;
+    @media screen and (min-width: $tablet-sm) {
+        padding-right: 2rem;
+        padding-left: 2rem;
+    }
+    @media screen and (min-width: $desktop-sm) {
+        padding: 0;
+    }
+    &__description {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        text-align: left;
+        @media screen and (min-width: $tablet) {
+            flex-direction: row;
+        }
+    }
+    &__indextitle {
+        padding-top: 3rem;
+        padding-bottom: 1rem;
+        font-family: $font-main;
+        color: $color-primary;
+        font-weight: $font-weight-light;
+        font-size: $font-size-xl;
+        text-align: center;
+        @media screen and (min-width: $tablet) {
+            font-size: 38px;
+        }
+        @media screen and (min-width: $desktop) {
+            font-size: 48px;
+        }
+        @media screen and (min-width: $desktop) {
+            font-size: 56px;
+        }
+    }
+    &__title {
+        font-family: $font-main;
+        color: $color-primary;
+        font-weight: $font-weight-light;
+        font-size: 40px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    &__innertitle {
+        font-weight: $font-weight-bold;
+        font-size: 20px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    &__innertitle--item {
+        display: block;
+    }
+    &__img {
+        display: block;
+        max-width: 100%;
+        margin: 0 auto;
+        @media screen and (min-width: $tablet) {
+            padding-bottom: 1rem;
+        }
+        @media screen and (min-width: $desktop-xl) {
+            max-width: 70%;
+        }
+    }
+    &__img-container {
+        height: 350px;
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+    &__img1 {
+        max-width: 100%;
+        position: relative;
+        top: -70px;
+    }
+    &__text {
+        padding-bottom: 1rem;
+        @media screen and (min-width: $desktop-sm) {
+            font-size: 18px;
+        }
+        @media screen and (min-width: $desktop-lg) {
+            padding-bottom: 1.1rem;
+        }
+        @media screen and (min-width: $desktop-xl) {
+            padding-bottom: 2.5rem;
+        }
+    }
+    &__text--bold {
+        font-weight: $font-weight-bold;
+        display: block;
+        @media screen and (min-width: $desktop-sm) {
+            padding-bottom: 0.5rem;
+        }
+    }
+    &__list {
+        list-style-type: square;
+        padding-bottom: 1rem;
     }
 }
 
@@ -168,12 +272,222 @@ ul {
 }
 
 .content {
-    display: flex;
-    &__img {
-        width: 30%;
+    padding-bottom: 1rem;
+    &__title {
+        font-weight: $font-weight-bold;
+        font-size: 20px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    &__title--top {
+        padding-top: 0px;
+    }
+    &__title--item {
+        display: block;
+    }
+    &__subtitle {
+        font-weight: $font-weight-bold;
+        font-size: 18px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        text-align: left;
+        text-transform: uppercase;
+    }
+    &__img-block {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 20px;
+        width: 100%;
+    }
+    //used in ipet-programme.pug
+    &__img-item--two {
+        min-width: 40%;
+        max-width: 45%;
         height: auto;
         padding-right: 20px;
     }
+    //used in history.pug
+    //used in mission-and-vision.pug
+    //used in diploma-supplement.pug
+    &__img-item--one {
+        display: block;
+        max-width: 100%;
+        margin: 0 auto;
+        //object-fit: contain;
+        @media screen and (min-width: $tablet) {
+            padding-bottom: 1rem;
+        }
+        @media screen and (min-width: $desktop-xl) {
+            max-width: 70%;
+        }
+    }
+    p {
+        padding-bottom: 1rem;
+        @media screen and (min-width: $desktop-sm) {
+            font-size: 18px;
+        }
+        @media screen and (min-width: $desktop-lg) {
+            padding-bottom: 1.1rem;
+        }
+        @media screen and (min-width: $desktop-xl) {
+            padding-bottom: 2.5rem;
+        }
+    }
+    &__text--bold {
+        font-weight: $font-weight-bold;
+        display: block;
+        @media screen and (min-width: $desktop-sm) {
+            padding-bottom: 0.5rem;
+        }
+    }
+    ul {
+        list-style-type: square;
+        padding-bottom: 1rem;
+        padding-left: 2rem;
+    }
+    li {
+        padding-bottom: 1rem;
+    }
+    // Baseline styles
+}
+
+
+/*
+.table {
+    border-collapse: collapse;
+    width: 100%;
+    &__thead {
+        background-color: $color-light;
+        color: $color-secondary;
+    }
+    &__thead>tr>th {
+        position: relative;
+        text-transform: uppercase;
+        text-align: center;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        font-weight: $font-weight-main;
+    }
+    &__tbody>tr>td {
+        vertical-align: top;
+        color: lighten($color-default, 30%);
+        border-bottom: 1px solid $color-light;
+        text-align: center;
+    }
+    &__text--left {
+        text-align: left;
+    }
+}
+*/
+
+.table-v2 {
+    min-width: 100%;
+    transition: 0.5s;
+    margin-bottom: 2rem;
+    &__thead {
+        background-color: $color-light;
+        text-align: center;
+    }
+    &__thead>tr>th {
+        padding: 0.5rem 8px;
+        font-weight: 400;
+    }
+    &__tbody {
+        //-flex-direction: column;
+        text-align: center;
+    }
+    &__tbody--left-text {
+        text-align: left;
+    }
+    &__tbody>tr>td {
+        border: 2px solid $color-secondary;
+        padding: 0.5rem 5px;
+        background-color: $neutral-primary;
+    }
+    &__heading {
+        border: 3px solid $color-secondary;
+        text-align: center;
+        background-color: $color-light;
+        text-align: center;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        color: $color-secondary;
+    }
+    &__subheading {
+        font-weight: 600;
+        border: 2px solid $color-light;
+    }
+    &__heading-data {
+        background-color: $neutral-primary;
+    }
+}
+
+.table {
+    min-width: 100%;
+    transition: 0.5s;
+    margin-bottom: 2rem;
+    &__thead {
+        background-color: $color-light;
+        text-align: center;
+    }
+    &__thead>tr>th {
+        padding: 0.5rem 12px;
+        font-weight: 400;
+    }
+    &__tbody {
+        //-flex-direction: column;
+        text-align: left;
+    }
+    &__tbody--left-text {
+        text-align: left;
+    }
+    &__tbody>tr>td {
+        border-bottom: 2px solid $neutral-primary;
+        padding: 0.5rem 12px;
+        //background-color: $neutral-primary;
+    }
+    &__heading {
+        border: 3px solid $color-secondary;
+        text-align: center;
+        background-color: $color-light;
+        text-align: center;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        color: $color-secondary;
+    }
+    &__subheading {
+        font-weight: 600;
+        //background-color: $neutral-primary;
+    }
+    &__heading-data {
+        background-color: $neutral-primary;
+    }
+    &__text--left {
+        text-align: left;
+    }
+    &__text--center {
+        text-align: center;
+    }
+}
+
+
+/*&__th {
+        flex-direction: column;
+    }
+    /*&__td {
+        flex-direction: column;
+        @media screen and (min-width: $desktop) {
+            flex-direction: row;
+        }
+    }
+    */
+
+.text-left {
+    text-align: left;
 }
 
 .left-centered {

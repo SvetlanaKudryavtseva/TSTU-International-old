@@ -1,0 +1,27 @@
+mixin project(data, class_name)
+    each val,i in data
+        div(class=class_name) 
+            img(class=class_name+'__img' src=val.img_url)
+            div(class=class_name+'__description')
+                if pageClass = 'joint-projects-page'
+                    if val.title
+                        p(class=class_name+'__text') #[strong #{field_title}] #{val.title}
+                    if val.acronym
+                        p(class=class_name+'__text') #[strong #{field_acronym}] #{val.acronym}
+                    if val.reference_no
+                        p(class=class_name+'__text') #[strong #{field_reference_no}] #{val.reference_no}
+                    if val.duration
+                        p(class=class_name+'__text') #[strong #{field_duration}] #{val.duration}
+                    if val.programme
+                        p(class=class_name+'__text') #[strong #{field_programme}] #{val.programme}
+                    if val.coordinator
+                        p(class=class_name+'__text') #[strong #{field_coordinator}] #{val.coordinator}
+                    if val.web_url
+                        p(class=class_name+'__text') #[strong #{field_web_url}]
+                            a(class=class_name+'__link' href=val.web_url) #{val.web_url}
+
+
+
+                else
+                    //- for all the rest pages
+                    p(class=divName+'__text') #{val.text}
