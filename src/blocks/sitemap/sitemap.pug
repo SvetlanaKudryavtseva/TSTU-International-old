@@ -1,0 +1,23 @@
+.page-header__middle
+    .page-header__content.container
+        include ../_elements/_brand/_brand
+        +brand
+        include ../_elements/_lang/_lang-toggle.pug
+        +lang-toggle
+        include ../_elements/_icon/_icon.pug
+        - const iconSearch = {
+        -   src: '../assets/images/icons/icon-search.png',
+        -   alt: 'search',
+        - }
+        +icon(iconSearch)
+        - const iconEye = {
+        -   src: '../assets/images/icons/icon-eye.png',
+        -   alt: 'icon eye',
+        - }
+        +icon(iconEye)
+        a(href='index.html')
+            include ../_elements/_menu-toggle/_menu-toggle
+            +menu-toggle
+.sitemap__navigation
+    include ../_elements/_sitemap/_data_sitemap_nav
+    include ../_elements/_sitemap/_data_sitemap_menu

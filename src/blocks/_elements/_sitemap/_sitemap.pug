@@ -1,6 +1,6 @@
-mixin nav (pages, className)
-    <!-- begin menu -->
-    menu(class=className)
+mixin sitemap (pages, className)
+    <!-- begin sitemap menu -->
+    div(class=className)
         ul(class=className+'__list')
             each page in pages
                 li(class=className+'__item')
@@ -10,4 +10,4 @@ mixin nav (pages, className)
                             each subPage in  page.submenu
                                 li(class=className+'__dropdown-item')
                                     a(class=className+'__dropdown-link' href= subPage.url)= subPage.title
-    <!-- end menu -->
+    <!-- end sitemap menu -->

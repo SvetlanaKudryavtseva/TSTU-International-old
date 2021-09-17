@@ -1,0 +1,57 @@
+#menu-toggle {
+    position: relative;
+    top: 0;
+    right: 0;
+    display: flex;
+    width: 78px;
+    height: 80px;
+    background: #F36F31;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    @media screen and (min-width: $tablet) {
+        height: 5.2rem;
+    }
+    &:hover {
+        opacity: 0.80;
+        filter: alpha(opacity=80);
+        /* For IE8 and earlier */
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        width: 2.5rem;
+        height: 0.1rem;
+        transform: translateY(-12px);
+        box-shadow: 0 12px 0 $color-secondary;
+        background: $color-secondary;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        width: 2.5rem;
+        height: 0.1rem;
+        transform: translateY(12px);
+        background: $color-secondary;
+    }
+}
+
+#menu-toggle.menu-toggle--active {
+    &::before {
+        content: '';
+        position: absolute;
+        width: 2.5rem;
+        height: 0.1rem;
+        transform: translateY(0) rotate(45deg);
+        box-shadow: 0 0 0 $color-secondary;
+        background: $color-secondary;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        width: 2.5rem;
+        height: 0.1rem;
+        transform: translateY(0) rotate(-45deg);
+        background: $color-secondary;
+    }
+}
