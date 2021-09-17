@@ -2,8 +2,7 @@
 header.page-header
     .page-header__top
         .page-header__content.container
-            //-include ../_elements/_nav/_nav
-            +nav
+            include ../_elements/_nav/_data_nav
             include ../_elements/_social/_social
             +social
             include ../_elements/_lang/_lang
@@ -25,53 +24,14 @@ header.page-header
             -   alt: 'icon eye',
             - }
             +icon(iconEye)
-            include ../_elements/_menu/_menu-toggle
-            +menu-toggle
-            include ../_elements/_sitemap/_sitemap
-            +sitemap
+            a(href='sitemap.html')
+                include ../_elements/_menu-toggle/_menu-toggle
+                +menu-toggle
+            //-include ../_elements/_sitemap/_sitemap
+            //-+sitemap
     .page-header__bottom
-        .page-header__content.container
-            include ../_elements/_menu/_menu
-            -
-                const menuMain = [
-                    {
-                        class: 'menu-main__link menu-main__link--accent',
-                        link: 'programmes.html',
-                        text: 'All Programmes'
-                    },
-                    {
-                        class: 'menu-main__link',
-                        link: 'admission.html',
-                        text: 'Admission'
-                    },
-                    {
-                        class: 'menu-main__link',
-                        link: 'education.html',
-                        text: 'Education'
-                    },
-                    {
-                        class: 'menu-main__link',
-                        link: 'research_and_innovation.html',
-                        text: 'Research & Innovation'
-                    },
-                    {
-                        class: 'menu-main__link',
-                        link: 'partnership.html',
-                        text: 'Partnership'
-                    },
-                    {
-                        class: 'menu-main__link',
-                        link: 'career-and-job.html',
-                        text: 'Career & Job'
-                    },
-                    {
-                        class: 'menu-main__link',
-                        link: 'alumni.html',
-                        text: 'Alumni'
-                    },
-
-                ]
-            +menuMain
+        .container
+            include ../_elements/_menu/_data_menu
 
 
 

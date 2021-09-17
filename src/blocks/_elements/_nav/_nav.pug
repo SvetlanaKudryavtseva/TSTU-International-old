@@ -1,65 +1,13 @@
-mixin nav()
-    <!-- begin nav -->
-    nav.nav
-        ul.nav__list
-            li.nav__item
-                a(href="about.html" class="nav__link nav__link--active") About TSTU
-                ul.nav__dropdown-list
-                    li(class="nav__dropdown-item")
-                        a(href="mission-and-vision.html" class="nav__dropdown-link") Mission
-                    li(class="nav__dropdown-item")
-                        a(href="history.html" class="nav__dropdown-link") History
-                    li(class="nav__dropdown-item")
-                        a(href="rector.html" class="nav__dropdown-link") Rector
-                    li(class="nav__dropdown-item")
-                        a(href="administration.html" class="nav__dropdown-link") Administration
-                    li(class="nav__dropdown-item")
-                        a(href="campus.html" class="nav__dropdown-link") Campus
-                    li(class="nav__dropdown-item")
-                        a(href="rankings.html" class="nav__dropdown-link") Rankings
-            li.nav__item
-                a(href="institutes-and-faculties.html" class="nav__link") Institutes & Faculties
-                ul.nav__dropdown-list
-                    li(class="nav__dropdown-item")
-                        a(href="#technological-institute-TSTU.html" class="nav__dropdown-link") Technological Institute
-                    li(class="nav__dropdown-item")
-                        a(href="#institute1" class="nav__dropdown-link") Institute of Architecture, Civil Engineering and Transport
-                    li(class="nav__dropdown-item")
-                        a(href="#institute2" class="nav__dropdown-link") Institute of Automation and Information Technologies
-                    li(class="nav__dropdown-item")
-                        a(href="institute3" class="nav__dropdown-link") Institute of Economics and Quality of Life
-                    li(class="nav__dropdown-item")
-                        a(href="institute3" class="nav__dropdown-link") Institute of Law
-                    li(class="nav__dropdown-item")
-                        a(href="institute3" class="nav__dropdown-link") Institute of Power Engineering, Tool Engineering and Radio Electronics
-                    li(class="nav__dropdown-item")
-                        a(href="institute3" class="nav__dropdown-link") Institute of Study by Correspondence
-                    li(class="nav__dropdown-item")
-                        a(href="institute3" class="nav__dropdown-link") Institute of Additional Professional Education
-                    li(class="nav__dropdown-item")
-                        a(href="institute3" class="nav__dropdown-link") International Education Faculty
-                    li(class="nav__dropdown-item")
-                        a(href="institute3" class="nav__dropdown-link") Faculty of Natural and Social Sciences
-            li.nav__item
-                a(href="tstu-international.html" class="nav__link") TSTU International
-                ul.nav__dropdown-list
-                    li(class="nav__dropdown-item")
-                        a(href="joint-projects.html" class="nav__dropdown-link") Joint Projects
-                    li(class="nav__dropdown-item")
-                        a(href="ipet-programme.html" class="nav__dropdown-link") I-Pet Programme
-                    li(class="nav__dropdown-item")
-                        a(href="diploma-supplement.html" class="nav__dropdown-link") Diploma Supplement
-                    li(class="nav__dropdown-item")
-                        a(href="#international-rankings" class="nav__dropdown-link") International Rankings
-                    li(class="nav__dropdown-item")
-                        a(href="#international-partnership" class="nav__dropdown-link") International Partnership
-            li.nav__item
-                a(href="#institutes" class="nav__link") Campus Life
-                ul.nav__dropdown-list
-                    li(class="nav__dropdown-item")
-                        a(href="#institute0" class="nav__dropdown-link") Accommodation
-                    li(class="nav__dropdown-item")
-                        a(href="#institute1" class="nav__dropdown-link") Virtual Tour
-                    li(class="nav__dropdown-item")
-                        a(href="#institute2" class="nav__dropdown-link") Culture & Sport
-    <!-- end nav -->
+mixin nav (pages, className)
+    <!-- begin navigation -->
+    nav(class=className)
+        ul(class=className+'__list')
+            each page in pages
+                li(class=className+'__item')
+                    a(class=className+'__link' href= page.url)= page.title
+                    if page.submenu.length > 0
+                        ul(class=className+'__dropdown-list')
+                            each subPage in  page.submenu
+                                li(class=className+'__dropdown-item')
+                                    a(class=className+'__dropdown-link' href= subPage.url)= subPage.title
+    <!-- end navigation -->

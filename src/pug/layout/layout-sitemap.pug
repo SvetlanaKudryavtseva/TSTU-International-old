@@ -1,0 +1,16 @@
+block variables
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="description", content=description)
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title #{title}
+
+    body(class=pageClass)
+        include ../../blocks/_elements/_elements
+        //- Main contact
+        .container
+            block content
+

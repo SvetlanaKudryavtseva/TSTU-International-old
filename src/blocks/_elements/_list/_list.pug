@@ -1,16 +1,16 @@
-mixin list(listName, ...atributes)
+mixin list(listName, ...attributes)
     ul(class=listName+'__list')
         //- output of main level list items
         each val in listName
             if val.onlySub === false
                 li= val.title
                     a= val.url
-                //- checking the existens of sublevel list items
+                //- checking the existence of sublevel list items
                 if val.sublevel === true
                     ul
                         each val_sub in val.items
                             li= val_sub.title
-            //- checking the existens of onlySunLevel variable
+            //- checking the existence of onlySubLevel variable
             else if val.onlySub === true
                 //- for SIDEBAR block
                 //- output only of sublevel list items

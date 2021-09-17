@@ -1,17 +1,20 @@
 /* Vars:
   ========================================================================== */
 
+//
 // Font
 $font-main: 'Roboto-Regular';
 $font-black: 'Roboto-Black';
 $font-italic: 'Roboto-Italic';
-// Font MAIN
+//
+// Font Size Main
 $font-size: 16px;
 $font-weight-main: 400;
 $line-height-main: 1.4;
 $font-weight-light: 300;
 $font-weight-bold: bold;
-//Font Size
+//
+//Font Size Adaptive
 $font-size-xs: $font-size * 0.75; // 12px
 $font-size-sm: $font-size * 0.875px; // 14px
 $font-size-md: $font-size * 1.125; // 18px;
@@ -27,6 +30,7 @@ $desktop-sm: 1024px;
 $desktop: 1280px;
 $desktop-lg: 1600px;
 $desktop-xl: 1980px;
+//
 // Main color
 $color-default: #101010;
 $color-primary: #0071BC;
@@ -37,15 +41,18 @@ $color-success: #26de81;
 $color-danger: #fc5c65;
 $color-warning: #fed330;
 $color-purple: #8854d0;
+//
 // Neutral Color
 $neutral-primary: #F6F9FC;
 $neutral-secondary: #ccc;
 $neutral-placeholder: #C0C4CC;
+//
 // Border Color
 $border-color: #DCDFE6;
 $border-light: #E4E7ED;
 $border-lighter: #EBEEF5;
 $border-lightex: #F2F6FC;
+//
 // Table gap
 $gap-xs: 0.5rem;
 $gap-sm: $gap-xs * 2;

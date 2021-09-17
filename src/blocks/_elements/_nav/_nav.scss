@@ -3,7 +3,7 @@
     &__list {
         display: flex;
         list-style: none;
-        //- flex-wrap: wrap;
+        flex-wrap: nowrap;
     }
     // navigation - li:hover
     &__item:hover &__dropdown-list {
