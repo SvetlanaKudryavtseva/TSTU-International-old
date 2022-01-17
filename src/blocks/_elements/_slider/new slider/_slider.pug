@@ -1,0 +1,20 @@
+mixin slider()
+    <!-- begin slider -->
+        .slider
+            picture.slider__picture.gradient-overlay
+                source(media='(min-width:769px)' srcset='../assets/images/slider/1_1600x1200_60.jpg' type='image/jpg')
+                source(media='(min-width:321px)' srcset='../assets/images/slider/1_768x1024.jpg' type='image/jpg')
+                img(class='slider__image' src='../assets/images/slider/1_768x1024.jpg' alt='A round table "Experience of cooperation between Tambov State Technical University and the University of Genoa on ERASMUS+ and TEMPUS programs"')
+                //- img(class='slider__image' src='../assets/images/slider/1_320x480.png' alt='A round table "Experience of cooperation between Tambov State Technical University and the University of Genoa on ERASMUS+ and TEMPUS programs"')
+            
+            .description
+                .descriptionText
+            .slider__nav
+                button.slider__prev
+                    span.slider__arrow--left
+                button.slider__next
+                    span.slider__arrow--right
+                button.slider__dot.slider__dot--active
+                button.slider__dot
+                button.slider__dot
+    <!-- end slider -->

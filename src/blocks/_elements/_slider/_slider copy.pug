@@ -3,17 +3,17 @@ mixin slider()
         .slider__item
             picture.slider__picture.gradient-overlay
                 source(media='(min-width:1920px)' srcset='../assets/images/TSTU_promo_1920-min.jpg' type='image/jpg')
-                source(media='(min-width:1600px)' srcset='../assets/images/slider/1_1600x1200(6).jpg' type='image/jpg')
+                source(media='(min-width:1600px)' srcset='../assets/images/TSTU_promo_1600-min.jpg' type='image/jpg')
+                object-position: right bottom;
                 source(media='(min-width:540px)' srcset='../assets/images/TSTU_promo_540-min.jpg' type='image/jpg' )
                 img(class='slider__img' src='../assets/images/TSTU_promo_320-min.jpg' alt='TSTU Intensive Russian language course')
             //- begin slider text
             .slider__description
                 h2.slider__text
                     a.slider__link(href="")
-                        span.slider__text--white TSTU takes part in 
-                        span.slider__text--white the Florence International Festival 
-                        span.slider__text--white of the World’s Cultural Expressions 
-                        span.slider__text--orange "The World in Florence"
+                        span.slider__text--white Degree
+                        span.slider__text--white Programmes
+                        span.slider__text--orange in English
                 //- end slider text
                 .slider__nav
                     button.slider__prev
