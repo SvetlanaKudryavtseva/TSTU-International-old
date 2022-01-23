@@ -1,0 +1,25 @@
+mixin slider()
+    .slider
+        .slider__item
+            picture.slider__picture.gradient-overlay
+                source(media='(min-width:1920px)' srcset='../assets/images/TSTU_promo_1920-min.jpg' type='image/jpg')
+                source(media='(min-width:1600px)' srcset='../assets/images/slider/1_1600x1200(6).jpg' type='image/jpg')
+                source(media='(min-width:540px)' srcset='../assets/images/TSTU_promo_540-min.jpg' type='image/jpg' )
+                img(class='slider__img' src='../assets/images/TSTU_promo_320-min.jpg' alt='TSTU Intensive Russian language course')
+            //- begin slider text
+            .slider__description
+                h2.slider__text
+                    a.slider__link(href="")
+                        span.slider__text--white TSTU takes part in 
+                        span.slider__text--white the Florence International Festival 
+                        span.slider__text--white of the World’s Cultural Expressions 
+                        span.slider__text--orange "The World in Florence"
+                //- end slider text
+                .slider__nav
+                    button.slider__prev
+                        span.slider__arrow--left
+                    button.slider__next
+                        span.slider__arrow--right
+                    button.slider__dot.slider__dot--active
+                    button.slider__dot
+                    button.slider__dot

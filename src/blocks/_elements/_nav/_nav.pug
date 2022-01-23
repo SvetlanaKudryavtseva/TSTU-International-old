@@ -7,7 +7,7 @@ mixin nav (pages, className)
                     a(class=className+'__link' href= page.url)= page.title
                     if page.submenu.length > 0
                         ul(class=className+'__dropdown-list')
-                            each subPage in  page.submenu
+                            each subPage in page.submenu
                                 li(class=className+'__dropdown-item')
                                     a(class=className+'__dropdown-link' href= subPage.url)= subPage.title
     <!-- end navigation -->

@@ -4,7 +4,8 @@
 //
 // Font
 $font-main: 'Roboto-Regular';
-$font-black: 'Roboto-Black';
+$font-heading-1: 'Montserrat-Bold';
+$font-heading: 'Montserrat-Regular';
 $font-italic: 'Roboto-Italic';
 //
 // Font Size Main
@@ -22,17 +23,17 @@ $font-size-lg: $font-size * 1.5; // 24px;
 $font-size-xl: $font-size * 1.875; // 30px;
 //
 // Screen Size
-$phone-sm: 320px;
-$phone: 480px;
-$tablet-sm: 540px;
-$tablet: 768px;
-$desktop-sm: 1024px;
-$desktop: 1280px;
-$desktop-lg: 1600px;
-$desktop-xl: 1980px;
+$phone-sm: 319px;
+$phone: 479px;
+$tablet-sm: 539px;
+$tablet: 767px;
+$desktop-sm: 1023px;
+$desktop: 1279px;
+$desktop-lg: 1599px;
+$desktop-xl: 1979px;
 //
 // Main color
-$color-default: #101010;
+$color-default: #212529;
 $color-primary: #2749A1;
 $color-secondary: #FFFFFF;
 $color-accent: #e56025;

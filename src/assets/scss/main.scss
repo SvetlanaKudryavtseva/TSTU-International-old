@@ -13,7 +13,7 @@
 }
 
 html {
-    font-family: $font-main;
+    font-family: $font-heading;
     line-height: $line-height-main;
     font-size: $font-size-md;
     color: $color-default;
@@ -102,13 +102,10 @@ ul {
 }
 
 .section {
-    padding: 2rem 1rem;
+    padding: 3rem 1rem;
     @media screen and (min-width: $tablet-sm) {
         padding-right: 2rem;
         padding-left: 2rem;
-    }
-    @media screen and (min-width: $desktop-sm) {
-        padding: 0;
     }
     &__description {
         width: 100%;
@@ -121,11 +118,10 @@ ul {
         }
     }
     &__indextitle {
-        padding-top: 3rem;
-        padding-bottom: 1rem;
-        font-family: $font-main;
+        font-family: $font-heading;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
         color: $color-primary;
-        font-weight: $font-weight-light;
         font-size: $font-size-xl;
         text-align: center;
         @media screen and (min-width: $tablet) {
@@ -133,9 +129,6 @@ ul {
         }
         @media screen and (min-width: $desktop) {
             font-size: 48px;
-        }
-        @media screen and (min-width: $desktop) {
-            font-size: 56px;
         }
     }
     &__title {
@@ -211,17 +204,17 @@ ul {
     &__col50 {
         @media screen and (min-width: $tablet) {
             flex: 0 1 50%;
-            padding: 0 20px 0 20px;
+            padding: 2rem 20px 0 20px;
         }
     }
     &__col50:first-child {
         @media screen and (min-width: $tablet) {
-            padding: 0 20px 0 0;
+            padding: 2rem 20px 0 0;
         }
     }
     &__col50:last-child {
         @media screen and (min-width: $tablet) {
-            padding: 0 0 0 20px;
+            padding: 2rem 0 0 20px;
         }
     }
     &__col30 {
@@ -524,7 +517,8 @@ ul {
     height: 100%;
     //background-image: linear-gradient(90deg, rgba(23, 110, 178, 1) 0%, rgba(23, 110, 178, 1) 50%, rgba(255, 255, 255, 0) 80%);
     //opacity: 0.8;
-    background: linear-gradient(90deg, #0069B4 0.15%, rgba(179, 188, 195, 0.02) 57.21%, rgba(196, 196, 196, 0.02) 89.78%, rgba(0, 105, 180, 0.8) 99.86%);
+    background: rgb(39, 73, 161);
+    background: linear-gradient(90deg, rgba(39, 73, 161, 1) 0%, rgba(255, 255, 255, 0.1) 60%, rgba(39, 73, 161, 1) 100%);
 }
 
 .gradient-overlay--dark::after {
@@ -536,7 +530,8 @@ ul {
     height: 100%;
     //background-image: linear-gradient(90deg, rgba(23, 110, 178, 1) 0%, rgba(23, 110, 178, 1) 50%, rgba(255, 255, 255, 0) 80%);
     //opacity: 0.8;
-    background: linear-gradient(89.83deg, #0069B4 0.25%, rgba(179, 188, 195, 0.02) 57.21%, rgba(196, 196, 196, 0.02) 89.78%, rgba(0, 105, 180, 0.8) 99.86%);
+    background: rgb(39, 73, 161);
+    background: linear-gradient(90deg, rgba(39, 73, 161, 1) 0%, rgba(255, 255, 255, 0.03) 60%, rgba(39, 73, 161, 1) 100%);
 }
 
 .bb-gray--light {

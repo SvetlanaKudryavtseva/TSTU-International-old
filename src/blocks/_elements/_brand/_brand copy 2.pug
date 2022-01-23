@@ -1,0 +1,20 @@
+mixin brand ($element, className)
+    <!-- begin brand -->
+    div(class=className)
+        a(class=className+'__link' href= url)
+            img(class=className+'__logo' src= logo_url alt= logo_alt)
+        if pageClass === 'index-page'
+            div(class= className+'__name')
+                h1
+                    a(class=className+'__link' href= url)
+                        span(class=className+'__title')= name_part1
+                        span(class=className+'__title')= name_part2
+                div(class=className+'__slogan')= slogan
+        else
+            div(class=className+'__name')
+                h1
+                    a(class=className+'__link' href= url)
+                        span(class=className+'__title')= name_part1
+                        span(class=className+'__title')= name_part2
+                div(class=className+'__slogan')= slogan
+    <!-- end brand -->

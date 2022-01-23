@@ -1,0 +1,35 @@
+.menu {
+    &__list {
+        display: none;
+        padding: 10px 0;
+        @media screen and (min-width: $desktop-sm) {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+    &__item {
+        padding-right: 38px;
+        @media screen and (min-width: $desktop-sm) {
+            padding-right: 24px;
+        }
+        @media screen and (min-width: $desktop) {
+            padding-right: 32px;
+        }
+        @media screen and (min-width: $desktop-lg) {
+            padding-right: 38px;
+        }
+    }
+    &__item:last-child {
+        padding-right: 0;
+    }
+    &__link {
+        font-size: $font-size-md;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $color-primary;
+    }
+    &__link--accent {
+        color: $color-accent;
+    }
+}

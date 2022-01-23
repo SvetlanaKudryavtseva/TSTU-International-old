@@ -1,16 +1,20 @@
-mixin brand()
+mixin brand (component, className)
     <!-- begin brand -->
-        .brand
-            a.brand__link(href="index.html")
-                img.brand__logo(src="../assets/images/logo/TSTU_logo.jpg" alt="logo of Tambov State Technical University")
-            if pageClass === 'index-page'
-                h1.brand__name
-                    a.brand__link(href="index.html")
-                            span.brand__title Tambov State 
-                            span.brand__title Technical University
-            else
-                .brand__name
-                    a.brand__link(href="index.html")
-                        span.brand__title Tambov State 
-                        span.brand__title Technical University
+    div(class=className)
+        a(class=className+'__link' href="index.html")
+            img(class=className+'__logo' src="../assets/images/logo/TSTU_logo.svg" alt="logo of Tambov State Technical University")
+        if pageClass === 'index-page'
+            div(class= className+'__name')
+                h1
+                    a(class=className+'__link' href="index.html")
+                        span(class=className+'__title')= 'Tambov State '
+                        span(class=className+'__title')= 'Technical University'
+                div(class=className+'__slogan')= 'Feature begins today!'
+        else
+            div(class=className+'__name')
+                h1
+                    a(class=className+'__link' href="index.html")
+                        span(class=className+'__title')= 'Tambov State '
+                        span(class=className+'__title')= 'Technical University'
+                div(class=className+'__slogan')= 'Feature begins today!'
     <!-- end brand -->

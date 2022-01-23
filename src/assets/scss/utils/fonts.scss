@@ -1,5 +1,8 @@
 @import 'mixins';
 //Roboto-Regular
 @include font-face('Roboto-Regular', '../fonts/Roboto-Regular');
-@include font-face('Roboto-Black', '../fonts/Roboto-Black');
-@include font-face('Roboto-Italic', '../fonts/Roboto-Italic');
+// @include font-face('Roboto-Black', '../fonts/Roboto-Black');
+// @include font-face('Roboto-Italic', '../fonts/Roboto-Italic');
+//Montserrat-Regular
+@include font-face('Montserrat-Regular', '../fonts/Montserrat-Regular');
+@include font-face('Montserrat-Bold', '../fonts/Montserrat-Bold');
