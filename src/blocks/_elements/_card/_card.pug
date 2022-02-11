@@ -1,0 +1,8 @@
+mixin card (items, className, logo_url, logo_alt, url)
+    <!-- begin card -->
+    each item in items
+        div(class=className)
+            a(class=className+'__link' href= url+item.short_name+'.html')
+                img(class=className+'__logo' src= logo_url+item.logo alt= logo_alt+item.name)
+                h4(class=className+'__heading')= item.name
+    <!-- end card -->
