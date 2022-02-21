@@ -1,4 +1,4 @@
-.menu-toggle {
+#menu-toggle {
     position: relative;
     top: 0;
     right: 0;
@@ -24,9 +24,6 @@
         filter: alpha(opacity=80);
         /* For IE8 and earlier */
     }
-}
-
-.menu-toggle--front {
     &::before {
         content: '';
         position: absolute;
@@ -46,30 +43,7 @@
     }
 }
 
-.menu-toggle--active {
-    &::before {
-        content: '';
-        position: absolute;
-        width: 2.5rem;
-        height: 0.1rem;
-        transform: translateY(0) rotate(45deg);
-        box-shadow: 0 0 0 $color-secondary;
-        background: $color-secondary;
-    }
-    &::after {
-        content: '';
-        position: absolute;
-        width: 2.5rem;
-        height: 0.1rem;
-        transform: translateY(0) rotate(-45deg);
-        background: $color-secondary;
-    }
-}
-
-.menu-toggle--close {
-    @media screen and (min-width: $desktop-sm) {
-        display: flex;
-    }
+#menu-toggle.menu-toggle--active {
     &::before {
         content: '';
         position: absolute;

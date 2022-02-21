@@ -1,4 +1,8 @@
 mixin menu-toggle()
     <!-- begin menu-toggle -->
-        #menu-toggle
+        if pageClass == 'sitemap-page'
+            .menu-toggle.menu-toggle--close
+        else
+            .menu-toggle.menu-toggle--front
+        
     <!-- end menu-toggle -->

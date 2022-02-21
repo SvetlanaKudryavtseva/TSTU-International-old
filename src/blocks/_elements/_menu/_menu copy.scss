@@ -1,0 +1,40 @@
+.menu {
+    &__list {
+        display: none;
+        padding: 10px 0;
+        @media screen and (min-width: $desktop-sm) {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+    &__item {
+        padding-right: 30px;
+        @media screen and (min-width: $desktop-sm) {
+            padding-right: 20px;
+        }
+        @media screen and (min-width: $desktop) {
+            padding-right: 32px;
+        }
+        @media screen and (min-width: $desktop-lg) {
+            padding-right: 26px;
+        }
+    }
+    &__item:last-child {
+        padding-right: 0;
+    }
+    &__link {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $color-primary;
+        @media screen and (min-width: $desktop-sm) {
+            font-size: 0.6rem;
+        }
+        @media screen and (min-width: $desktop) {
+            font-size: 0.8rem;
+        }
+    }
+    &__link--accent {
+        color: $color-accent;
+    }
+}
