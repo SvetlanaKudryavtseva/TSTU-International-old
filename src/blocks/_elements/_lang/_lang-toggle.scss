@@ -2,33 +2,41 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-right: 5px;
+    background-color: $color-secondary;
     font-size: 14px;
     @media screen and (min-width: $tablet-sm) {
         font-size: 16px;
     }
     @media screen and (min-width: $desktop-sm) {
         display: none;
-        padding-right: 10px;
+    }
+    &:before {
+        content: "";
+        border-left: 2px solid $color-primary;
+        height: 45px;
+    }
+    &__item {
+        position: relative;
+        padding-bottom: 10px;
+    }
+    &__dropdown-list {
+        position: absolute;
+        flex-direction: column;
+        z-index: 5;
+        background-color: $color-secondary;
+    }
+    &__item:hover &__dropdown-list {
+        padding-top: 10px;
+        display: flex;
     }
     &__link {
         text-decoration: none;
         color: $color-primary;
         padding-left: 10px;
-        padding-right: 5px;
+        padding-right: 10px;
         @media screen and (min-width: $tablet-sm) {
             padding-left: 20px;
-            padding-right: 10px;
+            padding-right: 20px;
         }
     }
-    &--inner {
-        display: none;
-        flex-direction: column;
-    }
-}
-
-.lang-toggle:before {
-    content: "";
-    border-left: 2px solid $color-primary;
-    height: 45px;
 }
