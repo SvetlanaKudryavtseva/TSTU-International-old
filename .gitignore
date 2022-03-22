@@ -5,5 +5,7 @@ workspace.TSTU-International.code-workspace
 sftp.json
 debug.log
 .vscode
+dist-to-php
+php
 
 
