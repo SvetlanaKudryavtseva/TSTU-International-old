@@ -1,0 +1,19 @@
+mixin instituteInfo (cards, className)
+    <!-- begin card -->
+    div(class=className)
+        //- if(id==institute_page_id)
+        each card in cards
+            img(class= className+'__img' src= card.img)
+            div(class= className+'__info')
+                p(class= className+'__title')= card.name
+                    br
+                    span= card.subinfo
+                p= card.position1
+                    br
+                    span= card.position2
+            div(class= className+'__contacts')
+                p= card.tel
+                p= card.fax
+                p= card.mail
+                p= card.address
+    <!-- end card -->

@@ -1,0 +1,11 @@
+mixin master (pages, className)
+    <!-- begin program -->
+    each page in pages
+        details(class=className)
+            summary(class=className+'__description')
+                div(class=className+'__title')
+                    p= page.code
+                    p= page.program
+            div(class=className+'__content')
+                
+    <!-- end program -->

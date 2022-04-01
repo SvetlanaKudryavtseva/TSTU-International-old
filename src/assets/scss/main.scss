@@ -132,18 +132,39 @@ ul {
         }
     }
     &__title {
-        font-family: $font-main;
+        // font-family: $font-main;
+        // color: $color-primary;
+        // font-weight: $font-weight-light;
+        // font-size: 40px;
+        // padding-top: 30px;
+        // padding-bottom: 30px;
+        font-family: $font-heading;
+        padding-top: 3.5rem;
+        padding-bottom: 2rem;
         color: $color-primary;
-        font-weight: $font-weight-light;
-        font-size: 40px;
-        padding-top: 30px;
-        padding-bottom: 30px;
+        font-size: $font-size-xl;
+        text-align: center;
+        @media screen and (min-width: $tablet) {
+            font-size: 38px;
+        }
+        @media screen and (min-width: $desktop) {
+            font-size: 48px;
+        }
     }
     &__innertitle {
         font-weight: $font-weight-bold;
         font-size: 20px;
         padding-top: 30px;
         padding-bottom: 30px;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    &__innertitle2 {
+        font-weight: $font-weight-bold;
+        font-size: 40px;
+        padding-top: 3rem;
+        padding-bottom: 30px;
+        color: $color-primary;
         text-align: center;
         text-transform: uppercase;
     }
