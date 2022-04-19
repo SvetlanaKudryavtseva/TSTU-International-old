@@ -1,0 +1,8 @@
+mixin about (blocks, className)
+    <!-- begin block -->
+    div(class=className)
+        //- if(id==institute_page_id)
+        each block in blocks
+            div(class= className+'__about')
+            img(class= className+'__img' src= block.img)
+    <!-- end block -->

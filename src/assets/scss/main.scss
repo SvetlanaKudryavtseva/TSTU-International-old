@@ -218,7 +218,7 @@ ul {
 }
 
 .colums {
-    display: block;
+    display: flex;
     @media screen and (min-width: $tablet) {
         display: flex;
     }
@@ -561,4 +561,9 @@ ul {
 
 .bt-blue {
     border-top: 5px solid $color-primary;
+}
+
+.about1 {
+    display: flex;
+    padding: 2rem 0;
 }

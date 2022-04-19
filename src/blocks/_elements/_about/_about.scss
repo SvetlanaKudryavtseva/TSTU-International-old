@@ -1,0 +1,36 @@
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin: 2rem auto;
+    background-color: $color-light;
+    align-items: center;
+    padding: 1.5rem;
+    &__img {
+        width: 13rem;
+        height: 13rem;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+    &__title {
+        font-size: 32px;
+        color: #0069B4;
+    }
+    &__title>span {
+        font-size: 18px;
+        color: #000000;
+    }
+    &__contact>td {
+        line-height: 3;
+        padding-right: 15px;
+        align: center;
+    }
+}

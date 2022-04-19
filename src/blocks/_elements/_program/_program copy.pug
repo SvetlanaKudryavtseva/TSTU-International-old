@@ -1,0 +1,18 @@
+mixin program (pages, className)
+    <!-- begin program -->
+    each page in pages
+        details(class=className)
+            summary(class=className+'__description')
+                div(class=className+'__title')
+                    p= page.code
+                    p= page.program
+            div(class=className+'__content')
+                each subPage in  page.profile
+                    ul(class=className+'__list')
+                        li= 'Profile: ' +subPage.profile_title
+                        li= 'Department: ' +subPage.department
+                        li= 'Tuition fee: ' +subPage.tuition_fee
+                        li= 'Form and period of study: ' +subPage.form_of_training+' '+subPage.period
+                        li Curriculum link:
+                            a(href=subPage.curriculum_link target="_blank")= subPage.curriculum_link
+    <!-- end program -->
