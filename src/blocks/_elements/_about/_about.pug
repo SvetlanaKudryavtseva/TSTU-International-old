@@ -1,8 +1,12 @@
 mixin about (blocks, className)
     <!-- begin block -->
     div(class=className)
-        //- if(id==institute_page_id)
         each block in blocks
-            div(class= className+'__about')
-            img(class= className+'__img' src= block.img)
+            if(block.about === pageClass)
+                .colums
+                    .colums_col50
+                        h2(class= className+'__title')= block.title
+                        p(class= className+'__text')= block.text
+                    .colums_col50
+                        img(class= className+'__img' src= block.image)
     <!-- end block -->

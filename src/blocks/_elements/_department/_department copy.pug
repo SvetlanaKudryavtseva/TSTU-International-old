@@ -1,0 +1,11 @@
+mixin department (pages, className)
+    <!-- begin department -->
+    each page in pages
+        details(class=className)
+            summary(class=className+'__description')
+                div(class=className+'__title')
+                    p= page.department
+            div(class=className+'__content')
+                //- Department Information will be here
+                    
+    <!-- end program -->

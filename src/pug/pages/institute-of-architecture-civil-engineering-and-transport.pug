@@ -1,9 +1,12 @@
 extends ../layout/layout-inner
+
+
 block variables
     - var description = 'Institute of architecture civil engineering and transport of TSTU - Tambov State Technical University'
     - var title = 'Institute of architecture civil engineering and transport of Tambov State Technical University'
     - var pageClass = 'ArchCiT-page'
     - var sectionKey = 'institutes'
+    - var pageDegree
 
 block promo
     include ../../blocks/promo/promo
@@ -14,26 +17,21 @@ block content
         a(href="institutes-and-faculties.html" class="breadcrumbs__link breadcrumbs__section-link") Institutes & Faculties
         a(href="#" class="breadcrumbs__link breadcrumbs__link--active") Institute of Architecture Civil Engineering and Transport
     section.about
-        h1.section__title Institute of Architecture,
-            br
-            span Civil Engineering and Transport
         .colums
             //- aside.colums__col30
             //-     include ../../blocks/sidebar/sidebar
             main
                 .content
-                    .colums
-                        .colums_col50
-                            p Institute of Architecture, Civil Engineering and Transport is one of the largest educational units of Tambov State Technical University. Educational process includes continuous training of architects, specialists for civil engineering industry, transport industry and agriculture. The Institute has great experience in conducting fundamental and applied research. It also participates in the priority RF scientific and research projects in the fields of Energy Efficiency, Energy Saving, Nuclear Power Engineering; Efficient Nature Management; Transport and Space Systems.
-                        .colums_col50
-                            img.about1__img(src="../../assets/images/logo/institutes/institute-of-automation-and-information-technologies-TSTU.jpg")
+                    include ../../blocks/about/about
                     include ../../blocks/instituteInfo/instituteInfo
                     h2.section__innertitle2 Departments
                     include ../../blocks/departments/departments
                     h2.section__innertitle2 Educational Programs
-                    h3.section__innertitle Bachelor Programs
+                    - var pageDegree = 'bachelor'
+                    h3.section__innertitle Bachelor Programmes
                     include ../../blocks/programs/programs
-                    h3.section__innertitle Master Programs
+                    h3.section__innertitle Master Programmes
                     include ../../blocks/master/master
+                    
                 
 

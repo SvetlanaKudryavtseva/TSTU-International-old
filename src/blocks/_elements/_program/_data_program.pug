@@ -1,114 +1,162 @@
 - let pdf_icon = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12.819 14.427c.064.267.077.679-.021.948-.128.351-.381.528-.754.528h-.637v-2.12h.496c.474 0 .803.173.916.644zm3.091-8.65c2.047-.479 4.805.279 6.09 1.179-1.494-1.997-5.23-5.708-7.432-6.882 1.157 1.168 1.563 4.235 1.342 5.703zm-7.457 7.955h-.546v.943h.546c.235 0 .467-.027.576-.227.067-.123.067-.366 0-.489-.109-.198-.341-.227-.576-.227zm13.547-2.732v13h-20v-24h8.409c4.858 0 3.334 8 3.334 8 3.011-.745 8.257-.42 8.257 3zm-12.108 2.761c-.16-.484-.606-.761-1.224-.761h-1.668v3.686h.907v-1.277h.761c.619 0 1.064-.277 1.224-.763.094-.292.094-.597 0-.885zm3.407-.303c-.297-.299-.711-.458-1.199-.458h-1.599v3.686h1.599c.537 0 .961-.181 1.262-.535.554-.659.586-2.035-.063-2.693zm3.701-.458h-2.628v3.686h.907v-1.472h1.49v-.732h-1.49v-.698h1.721v-.784z"/></svg>';
+- let download = 'Download Curriculum'
 -
     const dataProgram = [
         {
+            page: 'ArchCiT-page',
             code: '07.03.01',
             program: 'Architecture',
             profile: [
                 {
                     profile_title: 'Architectural Design',
-                    department: 'Architecture and Building Construction',
-                    tuition_fee: '117000',
-                    form_of_training: 'Full-time',
-                    period: '4 years',
-                    curriculum_link: 'https://tstu.ru/svedenPDF/pdf20/bak/up/up_07.03.01.01_2021_of.pdf',
-                }
-            ]
-        },
-                {
-            code: '07.03.04',
-            program: 'Urban Planning',
-            profile: [
-                {
-                    profile_title: 'Architectural Design',
-                    department: 'Architecture and Building Construction',
-                    form_of_training: 'Full-time',
-                    curriculum_link: 'https://tstu.ru/svedenPDF/pdf20/bak/up/up_07.03.01.01_2021_of.pdf	'
+                    form_of_training: [
+                        {
+                        department: 'Architecture and Building Construction',
+                        tuition_fee: '117000',
+                        form: 'Full-time',
+                        period: '5 years',
+                        curriculum_link: 'https://tstu.ru/svedenPDF/pdf20/bak/up/up_07.03.01.01_2021_of.pdf',
+                        }
+                    ]
                 }
             ]
         },
         {
+            page: 'ArchCiT-page',
+            code: '07.03.04',
+            program: 'Urban Planning',
+            profile: [
+                {
+                    profile_title: 'Urban Planning',
+                    form_of_training: [
+                        {
+                        department: 'Architecture and Building Construction',
+                        tuition_fee: '117000',
+                        form: 'Full-time',
+                        period: '5 years',
+                        curriculum_link: 'https://tstu.ru/svedenPDF/pdf20/bak/up/up_07.03.04.01_2021_of.pdf'
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            page: 'ArchCiT-page',
+            degree: 'bachelor',
             code: '08.03.01',
             program: 'Construction',
             profile: [
                 {
                     profile_title: 'Industrial and Civil Engineering',
-                    department: 'Structure of Buildings and Constructions',
-                    form_of_training: 'Full-time',
-                    curriculum_link: 'https://tstu.ru/svedenPDF/pdf20/bak/up/up_08.03.01.01_2021_of.pdf',
-                }
-            ],
-            profile: [
+                    form_of_training: [
+                        {
+                            form: 'Full-time',
+                            department: 'Structure of Buildings and Constructions',
+                            tuition_fee: '117000',
+                            period: '4 years',
+                            curriculum_link: 'https://tstu.ru/svedenPDF/pdf20/bak/up/up_08.03.01.01_2021_of.pdf',
+                        },
+                        {
+                            form: 'Study by correspondence',
+                            department: 'Institute of Study by Correspondence',
+                            tuition_fee: '47900',
+                            period: '4 years 10 months',
+                            curriculum_link: 'https://tstu.ru/svedenPDF/pdf20/bak/up/up_08.03.01.01_2021_zf.pdf',
+                        }
+                    ]
+                },
                 {
                     profile_title: 'Highways' ,
-                    department: 'Urban Planning and Roads',
-                    form_of_training: 'Full-time',
-                    curriculum_link: 'https://tstu.ru/svedenPDF/pdf20/bak/up/up_08.03.01.03_2021_of.pdf',
+                    form_of_training:[
+                        {
+                            department: 'Urban Planning and Roads',
+                            tuition_fee: '117000',
+                            form: 'Full-time',
+                            period: '5 years',
+                            curriculum_link: 'https://tstu.ru/svedenPDF/pdf20/bak/up/up_08.03.01.03_2021_of.pdf',
+                        }
+                    ]
                 }
             ]
         },
-        {
-            code: '23.03.01',
-            program: 'Technology of Transport Processes',
-            profile: [
-                {
-                    profile_title: 'Road Safety',
-                    department: 'Equipment and Technology of Road Transport',
-                    form_of_training: 'Full-time',
-                    curriculum_link: 'https://tstu.ru/svedenPDF/pdf20/bak/up/up_23.03.01.01_2021_of.pdf',
-                }
-            ]
-        },
-        {
-            code: '23.03.03',
-            program: 'Operation of Transport and Technological Machines and Complexes',
-            profile: [
-                {
-                    profile_title: 'Automobiles and Automotive Industry',
-                    department: 'Equipment and Technology of Road Transport',
-                    form_of_training: 'Full-time',
-                    curriculum_link: 'https://tstu.ru/svedenPDF/pdf20/bak/up/up_27.03.03.01_2017_zf.pdf',
-                }
-            ]
-        },
-                {
-            code: '35.03.06',
-            program: 'Agro-engineering',
-            profile: [
-                {
-                    profile_title: 'Technical Service in Agro-Industrial Complex' ,
-                    department: 'Agricultural Engineering',
-                    form_of_training: 'Full-time',
-                    curriculum_link: 'https://tstu.ru/svedenPDF/pdf20/bak/up/up_35.03.06.01_2021_of.pdf	 ',
-                }
-            ]
-        },
-                {
-            code: '43.03.01',
-            program: 'Service',
-            profile: [
-                {
-                    profile_title: 'Technologies for  logistics and transport services organization' ,
-                    department: 'Equipment and Technology of Road Transport',
-                    form_of_training: 'Full-time',
-                    curriculum_link: '-',
-                }
-            ]
-        },
-                {
-            code: '54.03.01',
-            program: 'Design',
-            profile: [
-                {
-                    profile_title: 'Design' ,
-                    department: 'Equipment and Technology of Road Transport',
-                    form_of_training: 'Full-time',
-                    curriculum_link: '-	',
-                }
-            ]
-        },
+        //- {
+        //-     //- page: 'ArchCiT-page',
+        //-     code: '23.03.01',
+        //-     program: 'Technology of Transport Processes',
+        //-     profile: [
+        //-         {
+        //-             profile_title: 'Road Safety',
+        //-             department: 'Equipment and Technology of Road Transport',
+        //-             tuition_fee: '117000',
+        //-             form_of_training: 'Full-time',
+        //-             period: '5 years',
+        //-             curriculum_link: 'https://tstu.ru/svedenPDF/pdf20/bak/up/up_23.03.01.01_2021_of.pdf',
+        //-         }
+        //-     ]
+        //- },
+        //- {
+            
+        //-     //- page: 'ArchCiT-page',
+        //-     code: '23.03.03',
+        //-     program: 'Operation of Transport and Technological Machines and Complexes',
+        //-     profile: [
+        //-         {
+        //-             profile_title: 'Automobiles and Automotive Industry',
+        //-             department: 'Equipment and Technology of Road Transport',
+        //-             tuition_fee: '117000',
+        //-             form_of_training: 'Full-time',
+        //-             period: '5 years',
+        //-             curriculum_link: 'https://tstu.ru/svedenPDF/pdf20/bak/up/up_27.03.03.01_2017_zf.pdf',
+        //-         }
+        //-     ]
+        //- },
+        //- {
+        //-     //- page: 'ArchCiT-page',
+        //-     code: '35.03.06',
+        //-     program: 'Agro-engineering',
+        //-     profile: [
+        //-         {
+        //-             profile_title: 'Technical Service in Agro-Industrial Complex' ,
+        //-             department: 'Agricultural Engineering',
+        //-             tuition_fee: '117000',
+        //-             form_of_training: 'Full-time',
+        //-             period: '5 years',
+        //-             curriculum_link: 'https://tstu.ru/svedenPDF/pdf20/bak/up/up_35.03.06.01_2021_of.pdf	 ',
+        //-         }
+        //-     ]
+        //- },
+        //- {
+        //-     //- page: 'ArchCiT-page',
+        //-     code: '43.03.01',
+        //-     program: 'Service',
+        //-     profile: [
+        //-         {
+        //-             profile_title: 'Technologies for  logistics and transport services organization' ,
+        //-             department: 'Equipment and Technology of Road Transport',
+        //-             tuition_fee: '117000',
+        //-             form_of_training: 'Full-time',
+        //-             period: '5 years',
+        //-             curriculum_link: '-',
+        //-         }
+        //-     ]
+        //- },
+        //- {
+        //-     //- page: 'ArchCiT-page',
+        //-     code: '54.03.01',
+        //-     program: 'Design',
+        //-     profile: [
+        //-         {
+        //-             profile_title: 'Environmental Design' ,
+        //-             department: 'Equipment and Technology of Road Transport',
+        //-             tuition_fee: '117000',
+        //-             form_of_training: 'Full-time',
+        //-             period: '5 years',
+        //-             curriculum_link: '-	',
+        //-         }
+        //-     ]
+        //- },
 
     ]
 
 -   let classProgram = 'program'
-+program(dataProgram, classProgram, pdf_icon)
++program(dataProgram, classProgram, pdf_icon, download)

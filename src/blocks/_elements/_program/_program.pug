@@ -1,16 +1,94 @@
-mixin program (pages, className, pdf_icon)
+mixin program (blocks, className, pdf_icon, download)
     <!-- begin program -->
-    each page in pages
-        div(class=className+'__title')
-            p= page.code
-            p= page.program
-        div(class=className+'__content')
-            each subPage in  page.profile
-                ul(class=className+'__list')
-                    li= subPage.profile_title
-                    li= subPage.department
-                    li= +subPage.tuition_fee
-                    li= +subPage.form_of_training+' '+subPage.period
-                    li
-                        a(href=subPage.curriculum_link target="_blank")= pdf_icon
-    <!-- end program -->
+    each block in blocks
+        if(block.page === pageClass)
+            details(class=className)
+                summary(class=className+'__title')
+                    p(class=className+'__code')= block.code
+                    p= block.program
+                table
+                    thead
+                        tr
+                            th Program
+                            th Form of training
+                            th Period
+                            th Tuition fee
+                            th Curriculum
+                            th Department
+                    tbody
+                        each items in block.profile
+                            if(items.form_of_training.length)
+                                tr
+                                    td(rowspan="2")= items.profile_title
+                            each item, key in items.form_of_training
+                                    td= key+ ': ' +item
+                                //- if(item.length)
+                                //-     for (var i = 0; i < item.length; i++)
+                                //-         tr
+                                //-             td(rowspan="2")= items.profile_title
+                                //-             td= item[0].form
+                                    //- if(item.length)
+                                    //-     for (var i = 0; i < item.length; i++)
+                                    //-         td= item[0].form
+                                        //- td= item[0].period
+                                        //- td= item[0].tuition_fee
+                                        //- td
+                                        //-     a(href=item[0].curriculum_link target="_blank")= 'Download Curriculum'
+                                        //- td= item[0].department
+                            //- else
+                            //-     tr
+                            //-         td(rowspan=2)= items.profile_title
+                            //-     each item in items.form_of_training
+                            //-         td= item.form
+                            //-     tr
+                            //-         td= item.period
+                            //-         td= item.tuition_fee
+                            //-         td
+                            //-             a(href=item.curriculum_link target="_blank")= 'Download Curriculum'
+                            //-         td= item.department
+                            //- if(items.form_of_training.length < 2)
+                            //-     each item in items.form_of_training
+                            //-         tr
+                            //-             td= item.form
+                            //- if(items.form_of_training.length > 2)
+                            //-     each item in items.form_of_training
+                            //-         tr
+                            //-             td= item.form
+                            //-         if(items.form_of_training.length > 1)
+                            //-             td= item.form
+                            //-             td= item.period
+                            //-             td= item.tuition_fee
+                            //-             td
+                            //-                 a(href=item.curriculum_link target="_blank")= 'Download Curriculum'
+                            //-             td= item.department
+                            //- tr= items.profile_title
+                                //- td(rowspan="2")= items.profile_title
+                            //- if(items.form_of_training.length > 1)
+                            //-     each item in items.form_of_training
+                            //-         for(let j = 0; item.form_of_training+j; j++) {
+                            //-             tr
+                            //-                 td(rowspan="2")= items.profile_title
+                            //-                 td= item.form
+                            //-             tr
+                            //-                 td 1
+                            //-         }
+                                //- each item in items.form_of_training
+                                //-     td= item.form
+
+                                    //- each item in items.form_of_training
+                                    //-     td= item.form
+                                    //-     td= item.period
+                                    //-     td= item.tuition_fee
+                                    //-     td
+                                    //-         a(href=item.curriculum_link target="_blank")= 'Download Curriculum'
+                                    //-     td= item.department
+                                    
+                                    //- tr
+                                    //-     td= item.for
+                                    //-     td= item.period
+                                    //-     td= item.tuition_fee
+                                    //-     td
+                                    //-         a(href=item.curriculum_link target="_blank")= 'Download Curriculum'
+                                    //-     td= item.department
+
+<!-- end program -->

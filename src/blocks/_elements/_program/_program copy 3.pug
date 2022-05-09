@@ -1,0 +1,27 @@
+mixin program (blocks, className, pdf_icon, download)
+    <!-- begin program -->
+    each block in blocks
+        details(class=className)
+            summary(class=className+'__title')
+                p(class=className+'__code')= block.code
+                p= block.program
+            table
+                thead
+                    tr
+                        th Program
+                        th Form of training
+                        th Period
+                        th Tuition fee
+                        th Curriculum
+                        th Department
+                tbody
+                    each subBlock in  block.profile
+                        tr
+                            td= subBlock.profile_title
+                            td= subBlock.form_of_training
+                            td= subBlock.period
+                            td= subBlock.tuition_fee
+                            td
+                                a(href=subBlock.curriculum_link target="_blank")= 'Download Curriculum'
+                            td= subBlock.department
+    <!-- end program -->

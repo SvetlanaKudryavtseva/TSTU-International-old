@@ -1,11 +1,13 @@
 mixin department (pages, className)
     <!-- begin department -->
-    each page in pages
-        details(class=className)
-            summary(class=className+'__description')
-                div(class=className+'__title')
-                    p= page.department
-            div(class=className+'__content')
-                //- Department Information will be here
+    div(class=className)
+        each page in pages
+            div(class=className+'__item')
+                p(class=className+'__title')= page.department
+                //- summary(class=className+'__description')
+                //-     p(class=className+'__title')
+                //-         p= page.department
+                //- div(class=className+'__content')
+                    //- Department Information will be here
                     
     <!-- end program -->

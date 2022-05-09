@@ -3,34 +3,25 @@
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
-    margin: 2rem auto;
-    background-color: $color-light;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     align-items: center;
-    padding: 1.5rem;
     &__img {
-        width: 13rem;
-        height: 13rem;
-        border-radius: 50%;
+        width: 500px;
+        height: auto;
+        border-radius: 10px;
         object-fit: cover;
-    }
-    &__info {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin-right: 1rem;
-        margin-left: 1rem;
+        margin-left: 3rem;
     }
     &__title {
         font-size: 32px;
         color: #0069B4;
+        font-weight: 800;
     }
-    &__title>span {
+    &__text {
+        padding-top: 1rem;
         font-size: 18px;
+        //line-height: 28px;
         color: #000000;
-    }
-    &__contact>td {
-        line-height: 3;
-        padding-right: 15px;
-        align: center;
     }
 }

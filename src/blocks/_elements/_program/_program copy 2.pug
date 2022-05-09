@@ -1,0 +1,16 @@
+mixin program (pages, className, pdf_icon, download)
+    <!-- begin program -->
+    each page in pages
+        div(class=className+'__title')
+            p= page.code
+            p= page.program
+        div(class=className+'__content')
+            each subPage in  page.profile
+                ul(class=className+'__list')
+                    li(class=className+'__item')= subPage.profile_title
+                    li(class=className+'__item')= subPage.department
+                    li(class=className+'__item')= subPage.tuition_fee
+                    li(class=className+'__item')= subPage.form_of_training+' '+subPage.period
+                    li(class=className+'__item')
+                        a(href=subPage.curriculum_link target="_blank")= subPage.download
+    <!-- end program -->
