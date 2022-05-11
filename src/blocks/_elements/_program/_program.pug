@@ -18,10 +18,16 @@ mixin program (blocks, className, pdf_icon, download)
                     tbody
                         each items in block.profile
                             if(items.form_of_training.length)
-                                tr
-                                    td(rowspan="2")= items.profile_title
-                            each item, key in items.form_of_training
-                                    td= key+ ': ' +item
+                                each item in items.form_of_training
+                                    tr
+                                        td= items.profile_title
+                                        td= item.form
+                                        td= item.period
+                                        td= item.tuition_fee
+                                        td= curriculum_link
+                                        td= department
+                                //- each item, key in items.form_of_training
+                                //-         td= key+ ': ' +item
                                 //- if(item.length)
                                 //-     for (var i = 0; i < item.length; i++)
                                 //-         tr

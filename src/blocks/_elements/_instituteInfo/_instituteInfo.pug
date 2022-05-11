@@ -1,7 +1,7 @@
 mixin instituteInfo (cards, className)
     <!-- begin card -->
     div(class=className)
-        //- if(id==institute_page_id)
+    if(info === pageClass)
         each card in cards
             img(class= className+'__img' src= card.img)
             div(class= className+'__info')
