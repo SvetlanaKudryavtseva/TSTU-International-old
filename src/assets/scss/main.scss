@@ -65,6 +65,9 @@ ul {
 .clearfix {
     clear: both;
 }
+p{
+    padding-bottom: 1rem;
+}
 
 .container {
     padding: 0 0 0 10px;
@@ -151,22 +154,22 @@ ul {
             font-size: 48px;
         }
     }
-    &__innertitle {
+    &__inner-title {
         font-weight: $font-weight-bold;
-        font-size: 20px;
-        padding-top: 30px;
-        padding-bottom: 30px;
+        font-size: 1.75rem;
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
         text-align: center;
     }
-    &__innertitle2 {
+    &__inner-title2 {
         font-weight: $font-weight-bold;
         font-size: 40px;
-        padding-top: 3rem;
-        padding-bottom: 30px;
+        padding-top: 4.5rem;
+        padding-bottom: 1rem;
         color: $color-primary;
         text-align: center;
     }
-    &__innertitle--item {
+    &__inner-title--item {
         display: block;
     }
     &__img {
@@ -302,6 +305,15 @@ ul {
 
 .content {
     padding-bottom: 1rem;
+    @media screen and (min-width: $desktop-sm) {
+        font-size: 18px;
+    }
+    @media screen and (min-width: $desktop-lg) {
+        padding-bottom: 1.1rem;
+    }
+    @media screen and (min-width: $desktop-xl) {
+        padding-bottom: 2.5rem;
+    }
     &__title {
         font-weight: $font-weight-bold;
         font-size: 20px;
@@ -354,18 +366,21 @@ ul {
             max-width: 70%;
         }
     }
-    p {
-        padding-bottom: 1rem;
-        @media screen and (min-width: $desktop-sm) {
-            font-size: 18px;
-        }
-        @media screen and (min-width: $desktop-lg) {
-            padding-bottom: 1.1rem;
-        }
-        @media screen and (min-width: $desktop-xl) {
-            padding-bottom: 2.5rem;
-        }
-    }
+    //  TODO
+
+
+    // p {
+    //     padding-bottom: 1rem;
+    //     // @media screen and (min-width: $desktop-sm) {
+    //     //     font-size: 18px;
+    //     // }
+    //     // @media screen and (min-width: $desktop-lg) {
+    //     //     padding-bottom: 1.1rem;
+    //     // }
+    //     // @media screen and (min-width: $desktop-xl) {
+    //     //     padding-bottom: 2.5rem;
+    //     // }
+    // }
     &__text--bold {
         font-weight: $font-weight-bold;
         display: block;

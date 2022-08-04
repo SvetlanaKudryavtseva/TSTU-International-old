@@ -75,6 +75,47 @@ module.exports = {
                     test: /\.pug$/,
                     loader: ['pug-loader']
                 },
+                // {
+                //     test: /\.scss$/,
+                //     use: [
+                //         "style-loader",
+                //         MiniCssExtractPlugin.loader,
+                //         {
+                //             loader: 'css-loader',
+                //             options: { sourceMap: true }
+                //         }, {
+                //             loader: 'postcss-loader',
+                //             options: {
+                //                 postcssOptions: {
+                //                     sourceMap: true,
+                //                     config: path.resolve(__dirname, '../postcss.config.js'),
+                //                 },
+                //             },
+                //         }, {
+                //             loader: 'sass-loader',
+                //             options: { sourceMap: true }
+                //         }
+                //     ]
+                // },
+                {
+                    test: /\.css$/,
+                    use: [
+                        'style-loader',
+                        MiniCssExtractPlugin.loader,
+                        {
+                            loader: 'css-loader',
+                            options: { sourceMap: true }
+                        }, {
+                            loader: 'postcss-loader',
+                            options: {
+                                postcssOptions: {
+                                    sourceMap: true,
+                                    config: path.resolve(__dirname, '../postcss.config.js'),
+                                },
+                            },
+                        },
+                    ]
+                },
                 {
                     test: /\.scss$/,
                     use: [
@@ -97,25 +138,6 @@ module.exports = {
                         }
                     ]
                 },
-                {
-                    test: /\.css$/,
-                    use: [
-                        'style-loader',
-                        MiniCssExtractPlugin.loader,
-                        {
-                            loader: 'css-loader',
-                            options: { sourceMap: true }
-                        }, {
-                            loader: 'postcss-loader',
-                            options: {
-                                postcssOptions: {
-                                    sourceMap: true,
-                                    config: path.resolve(__dirname, '../postcss.config.js'),
-                                },
-                            },
-                        },
-                    ]
-                }
             ]
         },
         plugins: [

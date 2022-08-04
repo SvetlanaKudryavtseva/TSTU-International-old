@@ -1,100 +1,55 @@
 mixin program (blocks, className, pdf_icon, download)
-    <!-- begin program -->
+    //- begin Bachelor programs
     each block in blocks
         if(block.page === pageClass)
             details(class=className)
-                summary(class=className+'__title')
+                summary(class=className+'__summary')
                     p(class=className+'__code')= block.code
-                    p= block.program
-                table
-                    thead
-                        tr
-                            th Program
-                            th Form of training
-                            th Period
-                            th Tuition fee
-                            th Curriculum
-                            th Department
-                    tbody
-                        each items in block.profile
-                            if(items.form_of_training.length)
-                                each item in items.form_of_training
-                                    tr
-                                        td= items.profile_title
-                                        td= item.form
-                                        td= item.period
-                                        td= item.tuition_fee
-                                        td= curriculum_link
-                                        td= department
-                                //- each item, key in items.form_of_training
-                                //-         td= key+ ': ' +item
-                                //- if(item.length)
-                                //-     for (var i = 0; i < item.length; i++)
-                                //-         tr
-                                //-             td(rowspan="2")= items.profile_title
-                                //-             td= item[0].form
-                                    //- if(item.length)
-                                    //-     for (var i = 0; i < item.length; i++)
-                                    //-         td= item[0].form
-                                        //- td= item[0].period
-                                        //- td= item[0].tuition_fee
-                                        //- td
-                                        //-     a(href=item[0].curriculum_link target="_blank")= 'Download Curriculum'
-                                        //- td= item[0].department
-                            //- else
-                            //-     tr
-                            //-         td(rowspan=2)= items.profile_title
-                            //-     each item in items.form_of_training
-                            //-         td= item.form
-                            //-     tr
-                            //-         td= item.period
-                            //-         td= item.tuition_fee
-                            //-         td
-                            //-             a(href=item.curriculum_link target="_blank")= 'Download Curriculum'
-                            //-         td= item.department
-                            //- if(items.form_of_training.length < 2)
-                            //-     each item in items.form_of_training
-                            //-         tr
-                            //-             td= item.form
-                            //- if(items.form_of_training.length > 2)
-                            //-     each item in items.form_of_training
-                            //-         tr
-                            //-             td= item.form
-                            //-         if(items.form_of_training.length > 1)
-                            //-             td= item.form
-                            //-             td= item.period
-                            //-             td= item.tuition_fee
-                            //-             td
-                            //-                 a(href=item.curriculum_link target="_blank")= 'Download Curriculum'
-                            //-             td= item.department
-                            //- tr= items.profile_title
-                                //- td(rowspan="2")= items.profile_title
-                            //- if(items.form_of_training.length > 1)
-                            //-     each item in items.form_of_training
-                            //-         for(let j = 0; item.form_of_training+j; j++) {
-                            //-             tr
-                            //-                 td(rowspan="2")= items.profile_title
-                            //-                 td= item.form
-                            //-             tr
-                            //-                 td 1
-                            //-         }
-                                //- each item in items.form_of_training
-                                //-     td= item.form
+                    p(class=className+'__program')= block.program
+                    if(block.tuition_fee_full==0)
+                        p(class=className+'__tuition-fee')= ' - '
+                    else
+                        p(class=className+'__tuition-fee')!= block.tuition_fee_full+ ' &#8381;'
 
-                                    //- each item in items.form_of_training
-                                    //-     td= item.form
-                                    //-     td= item.period
-                                    //-     td= item.tuition_fee
-                                    //-     td
-                                    //-         a(href=item.curriculum_link target="_blank")= 'Download Curriculum'
-                                    //-     td= item.department
-                                    
-                                    //- tr
-                                    //-     td= item.for
-                                    //-     td= item.period
-                                    //-     td= item.tuition_fee
-                                    //-     td
-                                    //-         a(href=item.curriculum_link target="_blank")= 'Download Curriculum'
-                                    //-     td= item.department
+                    if(block.tuition_fee_part==0)
+                        p(class=className+'__tuition-fee')= ' - '
+                    else
+                        p(class=className+'__tuition-fee')!= block.tuition_fee_part+ ' &#8381;'
 
-<!-- end program -->
+                    if(block.tuition_fee_corr==0)
+                        p(class=className+'__tuition-fee')= ' - '
+                    else
+                        p(class=className+'__tuition-fee')!= block.tuition_fee_corr+ ' &#8381;'
+
+                each item in block.profile
+                    div(class=className+'__profile')
+                        p(class=className+'__form')= item.form
+                        p(class=className+'__profile-title')
+                            a(class=className+'__curricula-link' href= item.curriculum_link target="_blank")= item.profile_title
+                        if(item.full_period==0)
+                            p(class=className+'__period')= ' - '
+                        else
+                            p(class=className+'__period')= item.full_period
+                                span(class=className+'__curricula-link')
+                                    a(href= item.curriculum_link_full target="_blank")= 'curriculum'
+                        if(item.part_period==0)
+                            p(class=className+'__period')= ' - '
+                        else
+                            p(class=className+'__period')= item.part_period
+                                span(class=className+'__curricula-link')
+                                    a(href= item.curriculum_link_part target="_blank")= 'curriculum'
+                        if(item.corr_period==0)
+                            p(class=className+'__period')= ' - '
+                        else
+                            p(class=className+'__period')= item.corr_period
+                                span(class=className+'__curricula-link')
+                                    a(href= item.curriculum_link_corr target="_blank")= 'curriculum'
+                        if(item.connect==1)
+                            div(class=className+'__connect')
+                                p(class=className+'__curricula')
+                                    a(href= item.curriculum_link class='btn__curricula' target="_blank")= 'curriculum'
+                                p(class=className+'__whatsapp')
+                                    a(href="" class='btn__whatsapp' target="_blank")= 'Whatsapp'
+                                p(class=className+'__apply')
+                                    a(href="" class='btn__apply' target="_blank")= 'Apply'
+    //- end Bachelor programs
