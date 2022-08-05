@@ -4,44 +4,41 @@ section.promo
         .container__slider
             include ../_elements/_slider/_slider
             +slider
-    else if (pageClass == 'institute-page')
+    else
         .container
             .promo__item
-                p.promo__title TSTU Institute of Economics and Quality of Life
-    else if (pageClass == 'ArchCiT-page')
-        .container
-            include ../_elements/_banner/_data_banner2.pug
-    else if (pageClass == 'about-page')
-        .promo__item
-            include ../_elements/_banner/_banner.pug
-            -
-                const bannerAbout = {
-                    id: 'about',
-                    src: '../assets/images/about-tstu.jpg',
-                    alt: 'search',
-                    title: 'About',
-                }
-            +banner(bannerAbout)
-    else if (pageClass == 'mission-page')
-        .promo__item
-            include ../_elements/_banner/_banner.pug
-            -
-                const bannerAbout = {
-                    id: 'mission',
-                    src: '../assets/images/mission-tstu.jpg',
-                    alt: 'search',
-                    title: 'Mission',
-                }
-            +banner(bannerAbout)
-    else if (pageClass == 'rector-page')
-        .promo__item
-            include ../_elements/_banner/_banner.pug
-            -
-                const bannerAbout = {
-                    id: 'rector',
-                    src: '../assets/images/rector-tstu.jpg',
-                    alt: 'search',
-                    title: 'Rector',
-                }
-            +banner(bannerAbout)
-<!-- end section -->
+                include ../_elements/_banner/_data_banner2.pug
+                //- else if (pageClass == 'about-page')
+                //-     .promo__item
+                //-         include ../_elements/_banner/_banner.pug
+                //-         -
+                //-             const bannerAbout = {
+                //-                 id: 'about',
+                //-                 src: '../assets/images/about-tstu.jpg',
+                //-                 alt: 'search',
+                //-                 title: 'About',
+                //-             }
+                //-         +banner(bannerAbout)
+                //- else if (pageClass == 'mission-page')
+                //-     .promo__item
+                //-         include ../_elements/_banner/_banner.pug
+                //-         -
+                //-             const bannerAbout = {
+                //-                 id: 'mission',
+                //-                 src: '../assets/images/mission-tstu.jpg',
+                //-                 alt: 'search',
+                //-                 title: 'Mission',
+                //-             }
+                //-         +banner(bannerAbout)
+                //- else if (pageClass == 'rector-page')
+                //-     .promo__item
+                //-         include ../_elements/_banner/_banner.pug
+                //-         -
+                //-             const bannerAbout = {
+                //-                 id: 'rector',
+                //-                 src: '../assets/images/rector-tstu.jpg',
+                //-                 alt: 'search',
+                //-                 title: 'Rector',
+                //-             }
+                //-         +banner(bannerAbout)
+            <!-- end section -->

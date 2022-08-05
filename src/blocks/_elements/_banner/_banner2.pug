@@ -2,8 +2,9 @@ mixin banner2 (components, className)
     <!-- begin banner2 -->
     div(class=className)
         each component in components
-            img(class=className+'__bg-image' src= component.bg_image)
-            div(class=className+'__content')
-                h1(class=className+'__heading')= component.heading
-                img(class=className+'__image' src= component.image)
+            if(component.for_page === pageClass)
+                div(class=className+'__content' style='background-image: url('+component.bg_image+')')
+                    h1(class=className+'__heading')= component.heading
+                    img(class=className+'__image' src= component.image)
+                    //- img(class=className+'__bg-image' src= component.bg_image)
     <!-- end banner2 -->

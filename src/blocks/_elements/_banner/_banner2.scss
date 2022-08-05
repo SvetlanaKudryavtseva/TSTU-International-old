@@ -1,25 +1,25 @@
 .banner2 {
+    max-height: 500px;
     position: relative;
-    z-index: auto;
-    &__bg-image {
-        position: absolute;
-        display: block;
-        margin: 0 auto;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 80%;
-        height: auto;
-        opacity: 0.3;
-        // z-index: -1;
-    }
+    // &__bg-image {
+    //     position: absolute;
+    //     display: block;
+    //     margin: 0 auto;
+    //     top: 50%;
+    //     left: 50%;
+    //     transform: translate(-50%, -50%);
+    //     width: 80%;
+    //     height: auto;
+    //     opacity: 0.3;
+    //     // z-index: -1;
+    // }
     &__content {
-        padding-top: 4rem;
-        padding-bottom: 4rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        z-index: auto;
+        background-size: 60%;
+        background-position: center;
+        background-repeat: no-repeat;
     }
     &__heading {
         font-size: 2.8rem;
@@ -29,7 +29,10 @@
         letter-spacing: 2px;
     }
     &__image {
-        width: 600px;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        max-width: 600px;
+        min-width: 300px;
         height: auto;
         background: $color-primary;
         border: 1px solid $color-light;
