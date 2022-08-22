@@ -7,5 +7,6 @@ debug.log
 .vscode
 dist-to-php
 php
+dist_archives
 
 
