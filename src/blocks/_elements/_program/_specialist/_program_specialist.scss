@@ -1,0 +1,132 @@
+.program-details {
+    border-top: 1px solid $color_primary;
+    &__summary {
+        font-weight: bold;
+        color: #2749a1;
+        // border-top: 1px solid $color_primary;
+        padding-left: 1rem;
+        padding-top: 1rem;
+        display: grid;
+        grid-template-columns: 0.1fr 1fr 4fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: ". code program fee1 fee2 fee3";
+    }
+    &__summary:hover {
+        color: $color_accent;
+    }
+    &__code {
+        width: 5rem;
+        padding-left: 1rem;
+        grid-area: code;
+    }
+    &__program {
+        width: 15rem;
+        padding-left: 1rem;
+        grid-area: program;
+    }
+    &__tuition-fee{
+        text-align: center;
+    }
+    &__tuition-fee:first-child{
+        grid-area: fee1;
+    }
+    &__tuition-fee:nth-child(2){
+        grid-area: fee2;
+    }
+    &__tuition-fee:last-child{
+        grid-area: fee3;
+    }
+    &__profile {
+        font-weight: 100;
+        color: $color-primary;
+        padding-top: 1rem;
+        margin-bottom: 1rem;
+        padding-left: 1.6875rem;
+        background-color: #f6f9fc;
+        display: grid;
+        grid-template-columns: 1.1fr 4fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "form profile-title full-period part-period corr-period"
+        ".  connect . . ."
+        ;
+    }
+    &__form{
+        grid-area: form;
+        font-size: small;
+        text-align: center;
+    }
+    &__profile-title{
+        padding-left: 1rem;
+        grid-area: profile-title;
+    }
+    &__curricula-link{
+        display: block;
+    }
+    &__curricula-link a{
+        color: $color-primary;
+    }
+    &__curricula-link a:hover{
+        color: $color-accent;
+    }
+    &__curricula-link a::after{
+        content: '\25B6';
+        padding-left: 0.1em;
+    }
+    &__period{
+        font-size: small;
+        color: $color-primary;
+        font-weight: 200;
+        text-align: center;
+    }
+    &__period:first-child{
+        grid-area: full-period;
+    }
+    &__period:nth-child(2){
+        grid-area: part-period;
+    }
+    &__period:last-child{
+        grid-area: corr-period;
+    }
+    &__connect{
+        padding-left: 1rem;
+        grid-area: connect;
+        display: grid;
+        grid-template-columns: 5rem 5rem 5rem;
+        grid-template-rows: 30px;
+        grid-template-areas: "curricula whatsapp apply";
+    }
+    &__curricula{
+        grid-area: curricula;
+        font-size: small;
+
+    }
+    &__whatsapp{
+        grid-area: whatsapp;
+        font-size: small;
+    }
+    &__apply{
+        grid-area: apply;
+        font-size: small;
+    }
+}
+summary::-webkit-details-marker {
+    display: none;
+}
+summary::before {
+    content: '\25B6';
+padding-right: 0.5em;
+}
+details[open] > summary::before {
+    content: '\25BC';
+}
+details{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+details[open]{
+    border-bottom: 1px solid $color_primary;
+}
+details[open]:last-child{
+    border-bottom: none;
+}

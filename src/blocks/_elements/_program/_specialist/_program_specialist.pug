@@ -1,0 +1,55 @@
+mixin specialist (blocks, className)
+    //- begin Specialist programs
+    each block in blocks
+        if(block.page === pageClass)
+            details(class=className)
+                summary(class=className+'__summary')
+                    p(class=className+'__code')= block.code
+                    p(class=className+'__program')= block.program
+                    if(block.tuition_fee_full==0)
+                        p(class=className+'__tuition-fee')= ' - '
+                    else
+                        p(class=className+'__tuition-fee')!= block.tuition_fee_full+ ' &#8381;'
+
+                    if(block.tuition_fee_part==0)
+                        p(class=className+'__tuition-fee')= ' - '
+                    else
+                        p(class=className+'__tuition-fee')!= block.tuition_fee_part+ ' &#8381;'
+
+                    if(block.tuition_fee_corr==0)
+                        p(class=className+'__tuition-fee')= ' - '
+                    else
+                        p(class=className+'__tuition-fee')!= block.tuition_fee_corr+ ' &#8381;'
+
+                each item in block.profile
+                    div(class=className+'__profile')
+                        p(class=className+'__form')= item.form
+                        p(class=className+'__profile-title')
+                            a(class=className+'__curricula-link' href= item.curriculum_link target="_blank")= item.profile_title
+                        if(item.full_period==0)
+                            p(class=className+'__period')= ' - '
+                        else
+                            p(class=className+'__period')= item.full_period
+                                span(class=className+'__curricula-link')
+                                    a(href= item.curriculum_link_full target="_blank")= 'curriculum'
+                        if(item.part_period==0)
+                            p(class=className+'__period')= ' - '
+                        else
+                            p(class=className+'__period')= item.part_period
+                                span(class=className+'__curricula-link')
+                                    a(href= item.curriculum_link_part target="_blank")= 'curriculum'
+                        if(item.corr_period==0)
+                            p(class=className+'__period')= ' - '
+                        else
+                            p(class=className+'__period')= item.corr_period
+                                span(class=className+'__curricula-link')
+                                    a(href= item.curriculum_link_corr target="_blank")= 'curriculum'
+                        if(item.connect==1)
+                            div(class=className+'__connect')
+                                p(class=className+'__curricula')
+                                    a(href= item.curriculum_link class='btn__curricula' target="_blank")= 'curriculum'
+                                p(class=className+'__whatsapp')
+                                    a(href="" class='btn__whatsapp' target="_blank")= 'Whatsapp'
+                                p(class=className+'__apply')
+                                    a(href="" class='btn__apply' target="_blank")= 'Apply'
+    //- end Master programs

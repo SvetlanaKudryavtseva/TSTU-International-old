@@ -1,0 +1,28 @@
+.programs {
+    margin-top: .5rem;
+    margin-right: .5rem;
+    border-radius: 10px;
+    background-color: $color_light;
+    padding: 1.5rem 3rem;
+    &__mode{
+        padding-left: 1.6875rem;
+        display: grid;
+        grid-template-columns: 0.1fr 1fr 4fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: ". . . mode-item1 mode-item2 mode-item3";
+    }
+    &__mode-item{
+        font-size: small;
+        color: $color-primary;
+        text-align: center;
+    }
+    &__mode-item:first-child{
+        grid-area: mode-item1;
+    }
+    &__mode-item:nth-child(2){
+        grid-area: mode-item2;
+    }
+    &__mode-item:last-child{
+        grid-area: mode-item3;
+    }
+}
